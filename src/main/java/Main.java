@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        booleanExpressionsExercise();
+        manualCasting();
         Car myCar = new Car("Tim's car");
         Car anotherCar = new Car("The Batmobile");
 
@@ -15,7 +15,6 @@ public class Main {
         myCar.brake();
         myCar.accelerate();
         anotherCar.brake();
-
     }
 
     private static void doubleResult() {
@@ -81,6 +80,20 @@ public class Main {
         System.out.printf("Reducing cost of apples: %s %n", moreApplesAndDearer);
     }
 
+    private static void automaticCasting() {
+        int myInt = 9;
+        double myDouble = myInt;
+        System.out.println(myInt);
+        System.out.println(myDouble);
+    }
+
+    private static void manualCasting() {
+        double myDouble = 9.78d;
+        int myInt = (int) myDouble;
+        System.out.println(myDouble);
+        System.out.println(myInt);
+    }
+
 }
 
 class Car {
@@ -91,7 +104,6 @@ class Car {
         name = carName;
 
     }
-
 
     public void accelerate() {
         speed++;
@@ -107,4 +119,5 @@ class Car {
         System.out.printf("%s is going %d miles per hour.%n", name, speed);
     }
 }
+
 
