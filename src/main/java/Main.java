@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        manualCasting();
+        relationalAndConditionalOperators();
         Car myCar = new Car("Tim's car");
         Car anotherCar = new Car("The Batmobile");
 
@@ -94,6 +94,86 @@ public class Main {
         System.out.println(myInt);
     }
 
+    private static void casting() {
+        byte a = 1;
+        short b;
+        char c;
+        int d;
+
+        int ex = a;
+    }
+
+    private static void operators() {
+        int answer = 7 + 3 * 4;
+        System.out.println(answer);
+    }
+
+    private static void primaryOperator() {
+        int x = 3;
+        int y = x++;
+        System.out.printf("Using x++,x is %s and y is %s.%n", x, y);
+
+        x = 3;
+        y = x++ - ++x;
+        System.out.printf("++x = X++ gives: x is %s and y is %s.%n", x, y);
+
+        x++;
+        int z = x;
+        y = z - x;
+        x++;
+        System.out.printf("++x - x++ gives: x is %s and y is %s.%n", x, y);
+
+        x = 3;
+        z = x;
+        x += 2;
+        y = z - x;
+        System.out.printf("x++ - ++x gives: x is %s and y is %s.%n", x, y);
+    }
+
+    private static void operatorPrecedence() {
+        double a = 12 * 3 / 4;
+        double b = (12 * 3) / 4;
+        double c = 12 * (3 / 4);
+        System.out.printf("%s %s %s %n", a, b, c);
+        System.out.println();
+
+        double d = 12.0 / 3.0 / 4.0;
+        double e = (12.0 / 3.0) / 4.0;
+        double f = 12.0 / (3.0 / 4.0);
+        System.out.printf("%s %s %s %n", d, e, f);
+        System.out.println();
+    }
+
+    private static void usingRemainderOperator() {
+        int x = 12;
+        int y = 6;
+        if (x % y == 0) {
+            System.out.printf("%s does exactly into %s%n", y, x);
+        } else {
+            System.out.printf("%s does not divide exactly into %s%n");
+        }
+    }
+
+    private static void getMonth() {
+        for (int month = 1; month <= 12; month++) {
+            System.out.printf("The next month after %s is %s%n", month, month % 12);
+        }
+    }
+
+    private static void relationalAndConditionalOperators() {
+        int a = 12;
+        int b = 6;
+        if (b != 0 && divideTwoNumbers(a, b) == 2) {
+            System.out.println("We've found a 2.");
+        }
+        if (b == 0 || divideTwoNumbers(a, b) == 2) {
+            System.out.println("We've found a 2.");
+        }
+    }
+
+    private static int divideTwoNumbers(int x, int y) {
+        return x / y;
+    }
 }
 
 class Car {
@@ -102,7 +182,6 @@ class Car {
 
     public Car(String carName) {
         name = carName;
-
     }
 
     public void accelerate() {
@@ -119,5 +198,6 @@ class Car {
         System.out.printf("%s is going %d miles per hour.%n", name, speed);
     }
 }
+
 
 
