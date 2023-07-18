@@ -1,10 +1,10 @@
 import java.math.BigDecimal;
-import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        relationalAndConditionalOperators();
+        valueAndReferenceType();
         Car myCar = new Car("Tim's car");
         Car anotherCar = new Car("The Batmobile");
 
@@ -173,6 +173,115 @@ public class Main {
 
     private static int divideTwoNumbers(int x, int y) {
         return x / y;
+    }
+
+    private static void stringProgram() {
+        String userName = "Ela";
+        System.out.println("My test for strings");
+
+        String adjective = "flamboyant";
+        String verb = "eat";
+        String none = "pogo stick";
+        System.out.println("My" + adjective + "sister accidentally" + verb + "expired pasta");
+    }
+
+    private static void stringIndexing() {
+        String courseName = "Learn Java for Beginners Crash Course";
+        String message = "Welcome to ";
+        String userInput = "I think I need to learn Java";
+        String lowerCaseInput = userInput.toLowerCase();
+        System.out.println(courseName.charAt(0));
+        System.out.println(courseName.charAt(6));
+        for (int i = 15; i < courseName.length(); i++) {
+            System.out.println(courseName.charAt(i));
+        }
+        System.out.println(courseName.length());
+    }
+
+    private static void myNameLength() {
+        String string = "Topolnicianu Mihaela Gabriela";
+        System.out.println("My full name has " + string.length() + " letters");
+    }
+
+    private static void exampleToUpperCaseAndToLowerCase() {
+        String txt = "Hello World";
+        System.out.println(txt.toUpperCase());
+        System.out.println(txt.toLowerCase());
+    }
+
+    private static void exercisesWithStrings() {
+        String word = "bobcat";
+        String find4 = "cat";
+        String find5 = "bob";
+        System.out.println("The first instance of " + find4 + "is at index:: " + word.indexOf(find4));
+        System.out.println("The first instance of " + find5 + "is at index::" + word.indexOf(find5));
+
+        String courseName = "Learn Java for Beginners Crash Course";
+
+        int position = -1;
+        do {
+            position = indexOfIgnoreCase(courseName, " c", position + 1);
+            if (position != -1) {
+                courseName = replaceByIndex(courseName, position, " c".length(), " Java");
+                System.out.println(courseName);
+
+                System.out.println(position);
+            }
+
+        }
+        while (position != -1);
+
+        String fixedString = courseName.replace(" Java", " C");
+        System.out.println(fixedString);
+    }
+
+    private static int indexOfIgnoreCase(String text, String searchText, int fromIndex) {
+        String textLowerCase = text.toLowerCase();
+        String searchTextLowerCase = searchText.toLowerCase();
+        return textLowerCase.indexOf(searchTextLowerCase, fromIndex);
+    }
+
+    private static String replaceByIndex(String original, int start, int length, String replacement) {
+        String toRemove = original.substring(start, start + length);
+        return original.replaceFirst(toRemove, replacement);
+    }
+
+    private static void stringEquality() {
+        String first = "This is a String";
+        String second = "THIS IS A STRING";
+        System.out.println(first == second);
+        System.out.println(first.equals(second));
+        System.out.println(second.equals(first));
+        System.out.println(second.equalsIgnoreCase(first));
+    }
+
+    private static void valueAndReferenceType() {
+        int x = 5;
+        int y = x;
+        System.out.printf("x = %d, y = %d%n", x, y);
+        System.out.printf("x is the same as y: %s%n", x == y);
+
+        String first = "This is a String";
+        String second = first;
+        System.out.printf("first: %s %n", first);
+        System.out.printf("second: %s %n", second);
+        System.out.printf("first is the same as second: %s %n", first == second);
+
+    }
+
+    private static void overloadedMethods() {
+        StringBuilder first = new StringBuilder("This is a String");
+        int a = 12;
+        int b = 34;
+        int c = 56;
+        first.append("");
+        first.append(a);
+        first.append(3.45);
+        first.append("");
+        first.append(a == 12);
+        first.append(b > c);
+
+
     }
 }
 
