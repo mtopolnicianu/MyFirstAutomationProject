@@ -1,10 +1,17 @@
+
 import java.math.BigDecimal;
 
 
 public class Main {
     public static void main(String[] args) {
 
-        valueAndReferenceType();
+       // System.out.println(StringExercises.extraFront("str"));
+      //  StringExercises.lastChars("", "Hello There");
+      //  System.out.println(StringExercises.seeColor("black"));
+        System.out.println(StringExercises.theEnd("Hello", false));
+        System.out.println(StringExercises.endsLy("mdfjdfhdjly"));
+
+        practiceWithStrings();
         Car myCar = new Car("Tim's car");
         Car anotherCar = new Car("The Batmobile");
 
@@ -281,6 +288,25 @@ public class Main {
         first.append(a == 12);
         first.append(b > c);
 
+
+    }
+
+    public String substringsPractice(){
+        String java = "I love Java";
+        String a = java.substring(7);
+        System.out.println(a);
+
+        String b = java.substring(2, 6);
+        System.out.println(b);
+
+        String c = java.substring(7, java.length());
+        System.out.println(c);
+        return a;
+    }
+
+    public static void practiceWithStrings(){
+        String str = new String("Poetic Justice - Kendrick Lamar");
+        System.out.println(str.substring(7, 10));
 
     }
 }
