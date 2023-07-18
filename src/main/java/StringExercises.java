@@ -75,7 +75,7 @@ public class StringExercises {
         if (front)
             return str.substring(0, 1);
         else
-            return str.substring(str.length() - 1);
+            return str.substring(str.length() -1);
     }
 
     //String-1 > endsLy: Given a string, return true if it ends in "ly".
@@ -84,12 +84,21 @@ public class StringExercises {
             return false;
         }
 
-        if (str.substring(str.length() - 2).equals("ly")) {
+        if (str.substring(str.length() - 2).endsWith("ly")) {
             return true;
         }
         {
             return false;
         }
+    }
+
+    /*String-1 > startWord: Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.*/
+    public static String startWord (String str, String word){
+        if (str.length()> 0 && str.substring(1).startsWith(word.substring(1))){
+            return str.substring(0, word.length());
+        }
+        else return "";
+
     }
 
 }

@@ -5,11 +5,12 @@ import java.math.BigDecimal;
 public class Main {
     public static void main(String[] args) {
 
-       // System.out.println(StringExercises.extraFront("str"));
-      //  StringExercises.lastChars("", "Hello There");
-      //  System.out.println(StringExercises.seeColor("black"));
+        System.out.println(StringExercises.extraFront("str"));
+        StringExercises.lastChars("", "Hello There");
+        System.out.println(StringExercises.seeColor("black"));
         System.out.println(StringExercises.theEnd("Hello", false));
         System.out.println(StringExercises.endsLy("mdfjdfhdjly"));
+        System.out.println(StringExercises.startWord("hippo", "xip"));
 
         practiceWithStrings();
         Car myCar = new Car("Tim's car");
