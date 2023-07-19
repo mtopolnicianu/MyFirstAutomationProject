@@ -11,18 +11,34 @@ public class Main {
         System.out.println(StringExercises.theEnd("Hello", false));
         System.out.println(StringExercises.endsLy("mdfjdfhdjly"));
         System.out.println(StringExercises.startWord("hippo", "xip"));
+        System.out.println(StringExercises.makeAbba("Hi", "Bye"));
+        System.out.println(StringExercises.left2("Hi"));
+        System.out.println(StringExercises.extraEnd("Hello"));
+        System.out.println(StringExercises.middleThree("Candy"));
+        System.out.println(StringExercises.withoutEnd("Hello"));
+        System.out.println(StringExercises.firstTwo("jsjksdks"));
+        System.out.println(StringExercises.withoutEnd2("HelloWord"));
+        System.out.println(StringExercises.nTwice("Chocolate", 2));
+        System.out.println(StringExercises.hasBad("xxbadxx"));
+        System.out.println(StringExercises.conCat("hdac", "cat"));
+        System.out.println(StringExercises.frontAgain("edited"));
+        System.out.println(StringExercises.withoutEnd2("HelloHe"));
+        System.out.println(StringExercises.withoutX("xHix"));
+        System.out.println(StringExercises.makeTags("i", "Hello"));
+        System.out.println(StringExercises.twoChar("java", 2));
+        System.out.println(StringExercises.middleTwo("Practice"));
 
-        practiceWithStrings();
-        Car myCar = new Car("Tim's car");
-        Car anotherCar = new Car("The Batmobile");
-
-        myCar.accelerate();
-        myCar.accelerate();
-        myCar.accelerate();
-        myCar.accelerate();
-        myCar.brake();
-        myCar.accelerate();
-        anotherCar.brake();
+//        practiceWithStrings();
+//        Car myCar = new Car("Tim's car");
+//        Car anotherCar = new Car("The Batmobile");
+//
+//        myCar.accelerate();
+//        myCar.accelerate();
+//        myCar.accelerate();
+//        myCar.accelerate();
+//        myCar.brake();
+//        myCar.accelerate();
+//        anotherCar.brake();
     }
 
     private static void doubleResult() {
