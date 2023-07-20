@@ -5,6 +5,7 @@ public class Main {
 
         System.out.println(StringExercises.extraFront("str"));
         System.out.println(StringExercises.helloName2("Dea"));
+        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
         StringExercises.lastChars("", "Hello There");
         System.out.println(StringExercises.seeColor("black"));
         System.out.println(StringExercises.theEnd("Hello", false));
@@ -15,6 +16,7 @@ public class Main {
         System.out.println(StringExercises.extraEnd("Hello"));
         System.out.println(StringExercises.middleThree("Candy"));
         System.out.println(StringExercises.withoutEnd("Hello"));
+        System.out.println(StringExercises.without2("HelloHe"));
         System.out.println(StringExercises.firstTwo("jsjksdks"));
         System.out.println(StringExercises.withoutEnd2("HelloWord"));
         System.out.println(StringExercises.nTwice("Chocolate", 2));
@@ -33,6 +35,7 @@ public class Main {
         System.out.println(StringExercises.comboString("Helloooooo", "test"));
         System.out.println(StringExercises.hasBad("xbadxx"));
         System.out.println(StringExercises.conCat("hdac", "cat"));
+        System.out.println(StringExercises.nonStart("Hello", "There"));
 
         practiceWithStrings();
         Car myCar = new Car("Tim's car");
