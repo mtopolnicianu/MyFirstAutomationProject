@@ -21,6 +21,10 @@ public class StringExercises {
         System.out.println(b);
     }
 
+    public static String makeOutWord2(String out, String word){
+        return out.substring(0, 2) +word + out.substring(2, 4);
+    }
+
     //String-1 > firstHalf: Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
     public static void getFirstHalfFromString() {
         String str = "WooHoo";
