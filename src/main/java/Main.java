@@ -1,11 +1,10 @@
-
 import java.math.BigDecimal;
-
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println(StringExercises.extraFront("str"));
+        System.out.println(StringExercises.helloName2("Dea"));
         StringExercises.lastChars("", "Hello There");
         System.out.println(StringExercises.seeColor("black"));
         System.out.println(StringExercises.theEnd("Hello", false));
@@ -19,26 +18,33 @@ public class Main {
         System.out.println(StringExercises.firstTwo("jsjksdks"));
         System.out.println(StringExercises.withoutEnd2("HelloWord"));
         System.out.println(StringExercises.nTwice("Chocolate", 2));
-        System.out.println(StringExercises.hasBad("xxbadxx"));
-        System.out.println(StringExercises.conCat("hdac", "cat"));
         System.out.println(StringExercises.frontAgain("edited"));
         System.out.println(StringExercises.withoutEnd2("HelloHe"));
         System.out.println(StringExercises.withoutX("xHix"));
         System.out.println(StringExercises.makeTags("i", "Hello"));
         System.out.println(StringExercises.twoChar("java", 2));
         System.out.println(StringExercises.middleTwo("Practice"));
+        System.out.println(StringExercises.lastTwo("Practice"));
+        System.out.println(StringExercises.atFirst("h"));
+        System.out.println(StringExercises.right2("Hello"));
+        System.out.println(StringExercises.minCat("Hello", "java"));
+        System.out.println(StringExercises.withoutXtwo("FruitsFr"));
+        System.out.println(StringExercises.deFont("xava"));
+        System.out.println(StringExercises.comboString("Helloooooo", "test"));
+        System.out.println(StringExercises.hasBad("xbadxx"));
+        System.out.println(StringExercises.conCat("hdac", "cat"));
 
-//        practiceWithStrings();
-//        Car myCar = new Car("Tim's car");
-//        Car anotherCar = new Car("The Batmobile");
-//
-//        myCar.accelerate();
-//        myCar.accelerate();
-//        myCar.accelerate();
-//        myCar.accelerate();
-//        myCar.brake();
-//        myCar.accelerate();
-//        anotherCar.brake();
+        practiceWithStrings();
+        Car myCar = new Car("Tim's car");
+        Car anotherCar = new Car("The Batmobile");
+
+        myCar.accelerate();
+        myCar.accelerate();
+        myCar.accelerate();
+        myCar.accelerate();
+        myCar.brake();
+        myCar.accelerate();
+        anotherCar.brake();
     }
 
     private static void doubleResult() {
