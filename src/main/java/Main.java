@@ -1,40 +1,48 @@
+import jdk.nashorn.api.scripting.ScriptObjectMirror;
+
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.Locale;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        System.out.println(StringExercises.extraFront("str"));
-        System.out.println(StringExercises.helloName2("Dea"));
-        StringExercises.lastChars("", "Hello There");
-        System.out.println(StringExercises.seeColor("black"));
-        System.out.println(StringExercises.theEnd("Hello", false));
-        System.out.println(StringExercises.endsLy("mdfjdfhdjly"));
-        System.out.println(StringExercises.startWord("hippo", "xip"));
-        System.out.println(StringExercises.makeAbba("Hi", "Bye"));
-        System.out.println(StringExercises.left2("Hi"));
-        System.out.println(StringExercises.extraEnd("Hello"));
-        System.out.println(StringExercises.middleThree("Candy"));
-        System.out.println(StringExercises.withoutEnd("Hello"));
-        System.out.println(StringExercises.firstTwo("jsjksdks"));
-        System.out.println(StringExercises.withoutEnd2("HelloWord"));
-        System.out.println(StringExercises.nTwice("Chocolate", 2));
-        System.out.println(StringExercises.frontAgain("edited"));
-        System.out.println(StringExercises.withoutEnd2("HelloHe"));
-        System.out.println(StringExercises.withoutX("xHix"));
-        System.out.println(StringExercises.makeTags("i", "Hello"));
-        System.out.println(StringExercises.twoChar("java", 2));
-        System.out.println(StringExercises.middleTwo("Practice"));
-        System.out.println(StringExercises.lastTwo("Practice"));
-        System.out.println(StringExercises.atFirst("h"));
-        System.out.println(StringExercises.right2("Hello"));
-        System.out.println(StringExercises.minCat("Hello", "java"));
-        System.out.println(StringExercises.withoutXtwo("FruitsFr"));
-        System.out.println(StringExercises.deFont("xava"));
-        System.out.println(StringExercises.comboString("Helloooooo", "test"));
-        System.out.println(StringExercises.hasBad("xbadxx"));
-        System.out.println(StringExercises.conCat("hdac", "cat"));
+//        System.out.println(StringExercises.extraFront("str"));
+//        System.out.println(StringExercises.helloName2("Dea"));
+//        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
+//        StringExercises.lastChars("", "Hello There");
+//        System.out.println(StringExercises.seeColor("black"));
+//        System.out.println(StringExercises.theEnd("Hello", false));
+//        System.out.println(StringExercises.endsLy("mdfjdfhdjly"));
+//        System.out.println(StringExercises.startWord("hippo", "xip"));
+//        System.out.println(StringExercises.makeAbba("Hi", "Bye"));
+//        System.out.println(StringExercises.left2("Hi"));
+//        System.out.println(StringExercises.extraEnd("Hello"));
+//        System.out.println(StringExercises.middleThree("Candy"));
+//        System.out.println(StringExercises.withoutEnd("Hello"));
+//        System.out.println(StringExercises.without2("HelloHe"));
+//        System.out.println(StringExercises.firstTwo("jsjksdks"));
+//        System.out.println(StringExercises.withoutEnd2("HelloWord"));
+//        System.out.println(StringExercises.nTwice("Chocolate", 2));
+//        System.out.println(StringExercises.frontAgain("edited"));
+//        System.out.println(StringExercises.withoutEnd2("HelloHe"));
+//        System.out.println(StringExercises.withoutX("xHix"));
+//        System.out.println(StringExercises.makeTags("i", "Hello"));
+//        System.out.println(StringExercises.twoChar("java", 2));
+//        System.out.println(StringExercises.middleTwo("Practice"));
+//        System.out.println(StringExercises.lastTwo("Practice"));
+//        System.out.println(StringExercises.atFirst("h"));
+//        System.out.println(StringExercises.right2("Hello"));
+//        System.out.println(StringExercises.minCat("Hello", "java"));
+//        System.out.println(StringExercises.withoutXtwo("FruitsFr"));
+//        System.out.println(StringExercises.deFont("xava"));
+//        System.out.println(StringExercises.comboString("Helloooooo", "test"));
+//        System.out.println(StringExercises.hasBad("xbadxx"));
+//        System.out.println(StringExercises.conCat("hdac", "cat"));
+//        System.out.println(StringExercises.nonStart("Hello", "There"));
 
-        practiceWithStrings();
+        stringPractice();
         Car myCar = new Car("Tim's car");
         Car anotherCar = new Car("The Batmobile");
 
@@ -45,6 +53,8 @@ public class Main {
         myCar.brake();
         myCar.accelerate();
         anotherCar.brake();
+
+
     }
 
     private static void doubleResult() {
@@ -215,17 +225,44 @@ public class Main {
         System.out.println("My" + adjective + "sister accidentally" + verb + "expired pasta");
     }
 
+    private static void stringPractice() {
+        String course = "Learn Java for Beginners Crash Course";
+        String message = "Welcome to ";
+        System.out.println(course.charAt(0));
+        System.out.println(course.charAt(6));
+        for (int i = 15; i < 23; i++) {
+            System.out.print(course.charAt(i));
+        }
+        System.out.println();
+    }
+
     private static void stringIndexing() {
+
+
         String courseName = "Learn Java for Beginners Crash Course";
         String message = "Welcome to ";
         String userInput = "I think I need to learn Java";
         String lowerCaseInput = userInput.toLowerCase();
+
         System.out.println(courseName.charAt(0));
         System.out.println(courseName.charAt(6));
         for (int i = 15; i < courseName.length(); i++) {
             System.out.println(courseName.charAt(i));
         }
         System.out.println(courseName.length());
+    }
+
+    private static void insensitiveIndexOf() {
+        String courseName = "Learn Java for Beginners Crash Course";
+        int position;
+        position = indexOfIgnoreCase(courseName, " j");
+        System.out.println(position);
+    }
+
+    private static int indexOfIgnoreCase(String text, String searchText) {
+        String textLowerCase = text.toLowerCase();
+        String searchTextLowerCase = searchText.toLowerCase();
+        return textLowerCase.indexOf(searchTextLowerCase);
     }
 
     private static void myNameLength() {
@@ -296,7 +333,6 @@ public class Main {
         System.out.printf("first: %s %n", first);
         System.out.printf("second: %s %n", second);
         System.out.printf("first is the same as second: %s %n", first == second);
-
     }
 
     private static void overloadedMethods() {
@@ -310,11 +346,9 @@ public class Main {
         first.append("");
         first.append(a == 12);
         first.append(b > c);
-
-
     }
 
-    public String substringsPractice(){
+    public String substringsPractice() {
         String java = "I love Java";
         String a = java.substring(7);
         System.out.println(a);
@@ -327,7 +361,7 @@ public class Main {
         return a;
     }
 
-    public static void practiceWithStrings(){
+    public static void practiceWithStrings() {
         String str = new String("Poetic Justice - Kendrick Lamar");
         System.out.println(str.substring(7, 10));
 
