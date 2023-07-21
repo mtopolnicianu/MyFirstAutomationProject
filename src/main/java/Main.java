@@ -1,8 +1,4 @@
-import jdk.nashorn.api.scripting.ScriptObjectMirror;
-
 import java.math.BigDecimal;
-import java.util.List;
-import java.util.Locale;
 
 public class Main {
 
@@ -36,24 +32,33 @@ public class Main {
 //        System.out.println(StringExercises.right2("Hello"));
 //        System.out.println(StringExercises.minCat("Hello", "java"));
 //        System.out.println(StringExercises.withoutXtwo("FruitsFr"));
-//        System.out.println(StringExercises.deFont("xava"));
+//        System.out.println(StringExercises.deFont("x"));
 //        System.out.println(StringExercises.comboString("Helloooooo", "test"));
 //        System.out.println(StringExercises.hasBad("xbadxx"));
 //        System.out.println(StringExercises.conCat("hdac", "cat"));
 //        System.out.println(StringExercises.nonStart("Hello", "There"));
+        System.out.println(JavaMathExercises.mathExercises(1,1));
+        System.out.println(JavaMathExercises.mathMaxExercise(17, 40));
+        System.out.println(JavaMathExercises.mathMinExercise(13, 9));
+        System.out.println(JavaMathExercises.sqrtExercise(64));
+        System.out.println(JavaMathExercises.absExercise(-4.5));
+        System.out.println(JavaMathExercises.randomExercise(566));
+        System.out.println(JavaMathExercises.randomNum(101));
+        System.out.println(JavaMathExercises.highestValueExercise(100, 74855));
+        System.out.println(JavaMathExercises.squareExercise(16));
 
-        stringPractice();
-        Car myCar = new Car("Tim's car");
-        Car anotherCar = new Car("The Batmobile");
 
-        myCar.accelerate();
-        myCar.accelerate();
-        myCar.accelerate();
-        myCar.accelerate();
-        myCar.brake();
-        myCar.accelerate();
-        anotherCar.brake();
 
+//        Car myCar = new Car("Tim's car");
+//        Car anotherCar = new Car("The Batmobile");
+//
+//        myCar.accelerate();
+//        myCar.accelerate();
+//        myCar.accelerate();
+//        myCar.accelerate();
+//        myCar.brake();
+//        myCar.accelerate();
+//        anotherCar.brake();
 
     }
 
