@@ -33,6 +33,22 @@ public class JavaBooleansExercises {
         return message2;
     }
 
+    public static boolean anotherExampleWithBoolean(){
+        boolean passedDoor = true;
+        boolean missedDoor = false;
+        if (passedDoor){
+            System.out.println("We passed the first dor!");
+        }
+        if (missedDoor){
+            System.out.println("We passed the first dor!");
+        }
+        if (passedDoor){
+            System.out.println("We passed the first dor!");
+        }
+
+        return passedDoor;
+    }
+
     public static boolean booleanExercise(){
         boolean greenLight = true;
         boolean pedestrian = false;

@@ -56,7 +56,8 @@ public class Main {
 //        System.out.println(JavaBooleansExercises.booleanExpressionTwo(12, 888));
 //        System.out.println(JavaBooleansExercises.equalExpression(10));
 //        System.out.println(JavaBooleansExercises.realLifeExampleWithBoolean(32, 18));
-        System.out.println(JavaBooleansExercises.booleanExercise());
+//        System.out.println(JavaBooleansExercises.booleanExercise());
+        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
 
 //        Car myCar = new Car("Tim's car");
 //        Car anotherCar = new Car("The Batmobile");
