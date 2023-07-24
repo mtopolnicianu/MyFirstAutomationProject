@@ -41,13 +41,16 @@ public class Main {
         System.out.println(JavaMathExercises.mathMaxExercise(17, 40));
         System.out.println(JavaMathExercises.mathMinExercise(13, 9));
         System.out.println(JavaMathExercises.sqrtExercise(64));
-        System.out.println(JavaMathExercises.absExercise(-4.5));
+        System.out.println(JavaMathExercises.mathExerciseThree(8.6, 5.2));
+        System.out.println(JavaMathExercises.mathExerciseFour(8.6, 5.2));
+        System.out.println(JavaMathExercises.mathExerciseFive(5, 3));
+        System.out.println(JavaMathExercises.absExercise(-26.7));
+        System.out.println(JavaMathExercises.floorExercise(7.8));
         System.out.println(JavaMathExercises.randomExercise(566));
         System.out.println(JavaMathExercises.randomNum(101));
         System.out.println(JavaMathExercises.highestValueExercise(100, 74855));
-        System.out.println(JavaMathExercises.squareExercise(16));
-
-
+        System.out.println(JavaMathExercises.squareExercise(9));
+        System.out.println(JavaMathExercises.squareExercise(12924L));
 
 //        Car myCar = new Car("Tim's car");
 //        Car anotherCar = new Car("The Batmobile");
