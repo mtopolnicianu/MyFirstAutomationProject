@@ -1,9 +1,13 @@
 import java.math.BigDecimal;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
+        JavaIfElseAndSwitchExercises.firstExample();
 //        System.out.println(StringExercises.extraFront("str"));
 //        System.out.println(StringExercises.helloName2("Dea"));
 //        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
@@ -57,7 +61,7 @@ public class Main {
 //        System.out.println(JavaBooleansExercises.equalExpression(10));
 //        System.out.println(JavaBooleansExercises.realLifeExampleWithBoolean(32, 18));
 //        System.out.println(JavaBooleansExercises.booleanExercise());
-        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
+//        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
 
 //        Car myCar = new Car("Tim's car");
 //        Car anotherCar = new Car("The Batmobile");
@@ -71,7 +75,6 @@ public class Main {
 //        anotherCar.brake();
 
     }
-
     private static void doubleResult() {
         double result1 = 0.1 * 7;
         double result2 = 0.1 + 0.1 + 0.1 + 0.1;
@@ -382,6 +385,7 @@ public class Main {
 
     }
 }
+
 
 class Car {
     private int speed = 0;
