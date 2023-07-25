@@ -215,6 +215,27 @@ public class JavaIfElseAndSwitchExercises {
             }
         }
     }
+
+    public static void ifElseExerciseFromTasks() {
+        Object obj1 = new Object();
+        Object obj2 = obj1;
+        if (obj1.equals(obj2))
+            System.out.println(true);
+        else
+            System.out.println(false);
+    }
+
+    public static void forLoopNested() {
+        //Outer loop
+        for (int i = 1; i <= 2; i++) {
+            System.out.println("Outer: " + i);
+
+            //Inner loop
+            for (int j = 1; j <= 3; j++) {
+                System.out.println("Inner: " + j);
+            }
+        }
+    }
 }
 
 
