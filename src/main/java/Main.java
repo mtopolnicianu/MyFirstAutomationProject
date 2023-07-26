@@ -20,6 +20,9 @@ public class Main {
         JavaIfElseAndSwitchExercises.forEachLoopExerciseThree();
         JavaIfElseAndSwitchExercises.forLoopNested();
         JavaIfElseAndSwitchExercises.switchString("B");
+        JavaIfElseAndSwitchExercises.flowControlExerciseOne();
+        JavaIfElseAndSwitchExercises.flowControlExerciseOne();
+        JavaIfElseAndSwitchExercises.firstExampleWithForLoop();
 //        System.out.println(StringExercises.extraFront("str"));
 //        System.out.println(StringExercises.helloName2("Dea"));
 //        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
