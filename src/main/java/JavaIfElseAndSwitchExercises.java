@@ -226,7 +226,6 @@ public class JavaIfElseAndSwitchExercises {
         for (int i = 0; i <= 10; i = i + 2) {
             System.out.println(i);
         }
-
     }
 
     public static void forLoopWithArray() {
@@ -276,10 +275,10 @@ public class JavaIfElseAndSwitchExercises {
         }
     }
 
-    public static void forEachLoopExerciseThree(){
-       List<Integer> nums = Arrays.asList(4,5,7,8,9);
+    public static void forEachLoopExerciseThree() {
+        List<Integer> nums = Arrays.asList(4, 5, 7, 8, 9);
 
-       nums.forEach(n -> System.out.println(n));
+        nums.forEach(n -> System.out.println(n));
 //       for (int i=0; i<5; i++ ){
 //           System.out.println(nums.get(i));
 
@@ -287,6 +286,49 @@ public class JavaIfElseAndSwitchExercises {
 //               System.out.println(n);
 //           }
 //       }
+    }
+
+    public static void flowControlExerciseOne() {
+        for (int i = 0; i <= 9; i++) {
+            System.out.printf("row %d ", i);
+            for (int j = 0; j <= 9; j++) {
+                System.out.print(j);
+            }
+            System.out.println(i);
+        }
+    }
+
+    public static void firstExampleWithForLoop() {
+        for (int i = 0; i <= 100; i++) {
+            if (i % 7 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static void secondExampleWithForLoop() {
+        for (int i = 0; i <= 100; i = i + 7) {
+            System.out.println(i);
+        }
+    }
+
+    //Loops: While vs Do..While
+    public static void conditionWithWhileLoop() {
+        int x = 1000;
+        while (x < 3) {
+            System.out.println("Hello!");
+            x++;
+        }
+    }
+
+    public static void conditionWithDoWhileLoop() {
+        int x = 1000;
+        do {
+            System.out.println("Hello!");
+            x++;
+        }
+        while (x < 3);
+
     }
 }
 
