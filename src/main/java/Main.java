@@ -6,18 +6,20 @@ public class Main {
 
 
     public static void main(String[] args) {
-//
-//        JavaIfElseAndSwitchExercises.firstExercise();
-//        JavaIfElseAndSwitchExercises.secondExercise();
-//        JavaIfElseAndSwitchExercises.thirdExercise();
-//        JavaIfElseAndSwitchExercises.fourthExercise();
-//        JavaIfElseAndSwitchExercises.fiveExercise();
-//        JavaIfElseAndSwitchExercises.exerciseWithNestedWhileLoop();
-//        JavaIfElseAndSwitchExercises.doWhileConditionExercise();
-//        JavaIfElseAndSwitchExercises.forLoopExercise();
-//        JavaIfElseAndSwitchExercises.doWhileConditionExercise();
-//        JavaIfElseAndSwitchExercises.ifElseExerciseFromTasks();
+
+        JavaIfElseAndSwitchExercises.firstExercise();
+        JavaIfElseAndSwitchExercises.secondExercise();
+        JavaIfElseAndSwitchExercises.thirdExercise();
+        JavaIfElseAndSwitchExercises.fourthExercise();
+        JavaIfElseAndSwitchExercises.fiveExercise();
+        JavaIfElseAndSwitchExercises.exerciseWithNestedWhileLoop();
+        JavaIfElseAndSwitchExercises.doWhileConditionExercise();
+        JavaIfElseAndSwitchExercises.forLoopExercise();
+        JavaIfElseAndSwitchExercises.doWhileConditionExercise();
+        JavaIfElseAndSwitchExercises.ifElseExerciseFromTasks();
+        JavaIfElseAndSwitchExercises.forEachLoopExerciseThree();
         JavaIfElseAndSwitchExercises.forLoopNested();
+        JavaIfElseAndSwitchExercises.switchString("B");
 //        System.out.println(StringExercises.extraFront("str"));
 //        System.out.println(StringExercises.helloName2("Dea"));
 //        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
