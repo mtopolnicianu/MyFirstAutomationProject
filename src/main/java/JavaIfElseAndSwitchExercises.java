@@ -1,7 +1,4 @@
-import java.util.List;
-import java.util.Locale;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class JavaIfElseAndSwitchExercises {
 
@@ -225,6 +222,20 @@ public class JavaIfElseAndSwitchExercises {
             System.out.println(false);
     }
 
+    public static void anotherExampleWithForLoop() {
+        for (int i = 0; i <= 10; i = i + 2) {
+            System.out.println(i);
+        }
+
+    }
+
+    public static void forLoopWithArray() {
+        String[] cars = {"Volvo", "BMW", "Ford"};
+        for (String car : cars) {
+            System.out.println(car);
+        }
+    }
+
     public static void forLoopNested() {
         //Outer loop
         for (int i = 1; i <= 2; i++) {
@@ -236,7 +247,49 @@ public class JavaIfElseAndSwitchExercises {
             }
         }
     }
+
+    public static void switchString(String input) {
+        switch (input) {
+            case "a":
+                System.out.println("apple");
+            case "b":
+                System.out.println("bat");
+                break;
+            case "B":
+                System.out.println("big bat");
+            default:
+                System.out.println("none");
+        }
+    }
+
+    public static void forEachLoopExerciseTwo() {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(3);
+        numbers.add(7);
+        numbers.add(2);
+        for (int a : numbers) {
+            System.out.println(a);
+            //or we can use:
+            for (int i = 0; i < numbers.size(); i++) {
+                System.out.println(numbers.get(i));
+            }
+        }
+    }
+
+    public static void forEachLoopExerciseThree(){
+       List<Integer> nums = Arrays.asList(4,5,7,8,9);
+
+       nums.forEach(n -> System.out.println(n));
+//       for (int i=0; i<5; i++ ){
+//           System.out.println(nums.get(i));
+
+//           for (int n : nums){
+//               System.out.println(n);
+//           }
+//       }
+    }
 }
+
 
 
 
