@@ -247,20 +247,6 @@ public class JavaIfElseAndSwitchForWhileExercises {
         }
     }
 
-    public static void switchString(String input) {
-        switch (input) {
-            case "a":
-                System.out.println("apple");
-            case "b":
-                System.out.println("bat");
-                break;
-            case "B":
-                System.out.println("big bat");
-            default:
-                System.out.println("none");
-        }
-    }
-
     public static void forEachLoopExerciseTwo() {
         ArrayList<Integer> numbers = new ArrayList<Integer>();
         numbers.add(3);
@@ -447,16 +433,32 @@ public class JavaIfElseAndSwitchForWhileExercises {
         }
     }
 
-    public static void breakWithNestedLoop(){
-        for (int i = 0; i < 5; i++){
-            for (int j = 0; j < 3; j++){
+    public static void breakWithNestedLoop() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 3; j++) {
                 System.out.println(i + "," + j);
                 break;
             }
         }
     }
 
+    //Java Switch Exercise:
+    public static String switchString(String input) {
+        switch (input) {
+            case "a":
+                System.out.println("apple");
+            case "b":
+                System.out.println("bat");
+                break;
+            case "B":
+                System.out.println("big bat");
+            default:
+                System.out.println("none");
+        }
+        return input;
+    }
 }
+
 
 
 
