@@ -17,14 +17,14 @@ public class Main {
 //        JavaIfElseAndSwitchForWhileExercises.ifElseExerciseFromTasks();
 //        JavaIfElseAndSwitchForWhileExercises.forEachLoopExerciseThree();
 //        JavaIfElseAndSwitchForWhileExercises.forLoopNested();
-//        JavaIfElseAndSwitchForWhileExercises.switchString("B");
+        JavaIfElseAndSwitchForWhileExercises.switchString("B");
 //        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
 //        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
 //        JavaIfElseAndSwitchForWhileExercises.firstExampleWithForLoop();
 //        JavaIfElseAndSwitchForWhileExercises.javaWhileLoopFour();
 //        JavaIfElseAndSwitchForWhileExercises.breakContinueExercise();
 //        JavaIfElseAndSwitchForWhileExercises.breakDown();
-        JavaIfElseAndSwitchForWhileExercises.breakWithNestedLoop();
+//        JavaIfElseAndSwitchForWhileExercises.breakWithNestedLoop();
 //        System.out.println(StringExercises.extraFront("str"));
 //        System.out.println(StringExercises.helloName2("Dea"));
 //        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
