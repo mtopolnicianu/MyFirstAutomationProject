@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class JavaIfElseAndSwitchExercises {
+public class JavaIfElseAndSwitchForWhileExercises {
 
     private static final int SCISSORS = 2;
     private static final int ROCK = 0;
@@ -281,7 +281,6 @@ public class JavaIfElseAndSwitchExercises {
         nums.forEach(n -> System.out.println(n));
 //       for (int i=0; i<5; i++ ){
 //           System.out.println(nums.get(i));
-
 //           for (int n : nums){
 //               System.out.println(n);
 //           }
@@ -328,8 +327,55 @@ public class JavaIfElseAndSwitchExercises {
             x++;
         }
         while (x < 3);
-
     }
+
+    public static void javaWhileLoopOne(){
+        int i = 0;
+        while (i < 5){
+            System.out.println(i);
+            i++;
+        }
+    }
+
+    public static void javaWhileLoopTwo(){
+        int i = 0;
+        do {
+            System.out.println(i);
+            i++;
+        }
+        while (i < 5);
+    }
+
+    public static void javaWhileLoopThree(){
+        int i = 0;
+        while (i < 5){
+            System.out.println(i);
+        }
+    }
+
+    //Write a program that reads an integer between 1 and 10 from the user
+    public static void javaWhileLoopFour(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int number = scanner.nextInt();
+        while ( number < 1 || number > 10) {
+
+            System.out.println(number + "is not between 1 and 10. Try again!");
+            number = scanner.nextInt();
+        }
+        System.out.println(number + " is between 1 and 10!");
+    }
+
+    public static void javaWhileLoopFive(){
+        int a = 0;
+
+        while (a < 100){
+            System.out.println("a");
+            a++;
+        }
+        System.out.println("Loop finished.");
+    }
+
 }
 
 
