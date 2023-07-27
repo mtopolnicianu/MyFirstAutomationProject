@@ -329,15 +329,15 @@ public class JavaIfElseAndSwitchForWhileExercises {
         while (x < 3);
     }
 
-    public static void javaWhileLoopOne(){
+    public static void javaWhileLoopOne() {
         int i = 0;
-        while (i < 5){
+        while (i < 5) {
             System.out.println(i);
             i++;
         }
     }
 
-    public static void javaWhileLoopTwo(){
+    public static void javaWhileLoopTwo() {
         int i = 0;
         do {
             System.out.println(i);
@@ -346,19 +346,19 @@ public class JavaIfElseAndSwitchForWhileExercises {
         while (i < 5);
     }
 
-    public static void javaWhileLoopThree(){
+    public static void javaWhileLoopThree() {
         int i = 0;
-        while (i < 5){
+        while (i < 5) {
             System.out.println(i);
         }
     }
 
     //Write a program that reads an integer between 1 and 10 from the user
-    public static void javaWhileLoopFour(){
+    public static void javaWhileLoopFour() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int number = scanner.nextInt();
-        while ( number < 1 || number > 10) {
+        while (number < 1 || number > 10) {
 
             System.out.println(number + "is not between 1 and 10. Try again!");
             number = scanner.nextInt();
@@ -366,14 +366,94 @@ public class JavaIfElseAndSwitchForWhileExercises {
         System.out.println(number + " is between 1 and 10!");
     }
 
-    public static void javaWhileLoopFive(){
+    public static void javaWhileLoopFive() {
         int a = 0;
 
-        while (a < 100){
+        while (a < 100) {
             System.out.println("a");
             a++;
         }
         System.out.println("Loop finished.");
+    }
+
+    public static void continueExerciseOne() {
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0)
+                continue;
+            System.out.println(i + " ");
+        }
+
+    }
+
+    public static void breakExerciseOne() {
+        int number;
+        while (true) {
+            System.out.println("enter a number between 1 and 10: ");
+            number = scanner.nextInt();
+            if (number < 1 || number > 10)
+                continue;
+            break;
+        }
+        System.out.println(number + " is between 1 and 10.");
+    }
+
+    public static void breakContinueExercise() {
+        Scanner keyboard = new Scanner(System.in);
+        int i = 0;
+        do {
+            System.out.println("Enter number 1");
+            int number1 = keyboard.nextInt();
+
+            System.out.println("Enter number 2");
+            int number2 = keyboard.nextInt();
+
+            if (number2 == 0) {
+                continue;
+                //break;
+            }
+
+            System.out.println(number1 + "/" + number2 + " is " + (number1 / number2));
+            i++;
+        }
+        while (i < 10);
+        System.out.println("The end!");
+    }
+
+    public static void breakDown() {
+        int[] numbers = {10, 20, 30, 40, 50};
+        int i;
+        for (i = 0; i < numbers.length; i++) {
+            if (numbers[i] == 30) {
+                break;
+            }
+            System.out.println(numbers[i]);
+
+        }
+    }
+
+    public static void breakDownWithSwitch() {
+        int i = 0;
+        switch (i) {
+            case 0:
+                System.out.println("Zero!");
+                break;
+
+            case 1:
+                System.out.println("One!");
+                break;
+            default:
+                System.out.println("what???");
+                break;
+        }
+    }
+
+    public static void breakWithNestedLoop(){
+        for (int i = 0; i < 5; i++){
+            for (int j = 0; j < 3; j++){
+                System.out.println(i + "," + j);
+                break;
+            }
+        }
     }
 
 }
