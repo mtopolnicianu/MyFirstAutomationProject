@@ -1,28 +1,27 @@
 import java.math.BigDecimal;
-import java.util.Random;
-import java.util.Scanner;
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-        JavaIfElseAndSwitchExercises.firstExercise();
-        JavaIfElseAndSwitchExercises.secondExercise();
-        JavaIfElseAndSwitchExercises.thirdExercise();
-        JavaIfElseAndSwitchExercises.fourthExercise();
-        JavaIfElseAndSwitchExercises.fiveExercise();
-        JavaIfElseAndSwitchExercises.exerciseWithNestedWhileLoop();
-        JavaIfElseAndSwitchExercises.doWhileConditionExercise();
-        JavaIfElseAndSwitchExercises.forLoopExercise();
-        JavaIfElseAndSwitchExercises.doWhileConditionExercise();
-        JavaIfElseAndSwitchExercises.ifElseExerciseFromTasks();
-        JavaIfElseAndSwitchExercises.forEachLoopExerciseThree();
-        JavaIfElseAndSwitchExercises.forLoopNested();
-        JavaIfElseAndSwitchExercises.switchString("B");
-        JavaIfElseAndSwitchExercises.flowControlExerciseOne();
-        JavaIfElseAndSwitchExercises.flowControlExerciseOne();
-        JavaIfElseAndSwitchExercises.firstExampleWithForLoop();
+        JavaIfElseAndSwitchForWhileExercises.firstExercise();
+        JavaIfElseAndSwitchForWhileExercises.secondExercise();
+        JavaIfElseAndSwitchForWhileExercises.thirdExercise();
+        JavaIfElseAndSwitchForWhileExercises.fourthExercise();
+        JavaIfElseAndSwitchForWhileExercises.fiveExercise();
+        JavaIfElseAndSwitchForWhileExercises.exerciseWithNestedWhileLoop();
+        JavaIfElseAndSwitchForWhileExercises.doWhileConditionExercise();
+        JavaIfElseAndSwitchForWhileExercises.forLoopExercise();
+        JavaIfElseAndSwitchForWhileExercises.doWhileConditionExercise();
+        JavaIfElseAndSwitchForWhileExercises.ifElseExerciseFromTasks();
+        JavaIfElseAndSwitchForWhileExercises.forEachLoopExerciseThree();
+        JavaIfElseAndSwitchForWhileExercises.forLoopNested();
+        JavaIfElseAndSwitchForWhileExercises.switchString("B");
+        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
+        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
+        JavaIfElseAndSwitchForWhileExercises.firstExampleWithForLoop();
+        JavaIfElseAndSwitchForWhileExercises.javaWhileLoopFour();
 //        System.out.println(StringExercises.extraFront("str"));
 //        System.out.println(StringExercises.helloName2("Dea"));
 //        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
