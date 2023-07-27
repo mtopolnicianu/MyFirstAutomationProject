@@ -5,23 +5,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        JavaIfElseAndSwitchForWhileExercises.firstExercise();
-        JavaIfElseAndSwitchForWhileExercises.secondExercise();
-        JavaIfElseAndSwitchForWhileExercises.thirdExercise();
-        JavaIfElseAndSwitchForWhileExercises.fourthExercise();
-        JavaIfElseAndSwitchForWhileExercises.fiveExercise();
-        JavaIfElseAndSwitchForWhileExercises.exerciseWithNestedWhileLoop();
-        JavaIfElseAndSwitchForWhileExercises.doWhileConditionExercise();
-        JavaIfElseAndSwitchForWhileExercises.forLoopExercise();
-        JavaIfElseAndSwitchForWhileExercises.doWhileConditionExercise();
-        JavaIfElseAndSwitchForWhileExercises.ifElseExerciseFromTasks();
-        JavaIfElseAndSwitchForWhileExercises.forEachLoopExerciseThree();
-        JavaIfElseAndSwitchForWhileExercises.forLoopNested();
-        JavaIfElseAndSwitchForWhileExercises.switchString("B");
-        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
-        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
-        JavaIfElseAndSwitchForWhileExercises.firstExampleWithForLoop();
-        JavaIfElseAndSwitchForWhileExercises.javaWhileLoopFour();
+//        JavaIfElseAndSwitchForWhileExercises.firstExercise();
+//        JavaIfElseAndSwitchForWhileExercises.secondExercise();
+//        JavaIfElseAndSwitchForWhileExercises.thirdExercise();
+//        JavaIfElseAndSwitchForWhileExercises.fourthExercise();
+//        JavaIfElseAndSwitchForWhileExercises.fiveExercise();
+//        JavaIfElseAndSwitchForWhileExercises.exerciseWithNestedWhileLoop();
+//        JavaIfElseAndSwitchForWhileExercises.doWhileConditionExercise();
+//        JavaIfElseAndSwitchForWhileExercises.forLoopExercise();
+//        JavaIfElseAndSwitchForWhileExercises.doWhileConditionExercise();
+//        JavaIfElseAndSwitchForWhileExercises.ifElseExerciseFromTasks();
+//        JavaIfElseAndSwitchForWhileExercises.forEachLoopExerciseThree();
+//        JavaIfElseAndSwitchForWhileExercises.forLoopNested();
+//        JavaIfElseAndSwitchForWhileExercises.switchString("B");
+//        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
+//        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
+//        JavaIfElseAndSwitchForWhileExercises.firstExampleWithForLoop();
+//        JavaIfElseAndSwitchForWhileExercises.javaWhileLoopFour();
+//        JavaIfElseAndSwitchForWhileExercises.breakContinueExercise();
+//        JavaIfElseAndSwitchForWhileExercises.breakDown();
+        JavaIfElseAndSwitchForWhileExercises.breakWithNestedLoop();
 //        System.out.println(StringExercises.extraFront("str"));
 //        System.out.println(StringExercises.helloName2("Dea"));
 //        System.out.println(StringExercises.makeOutWord2("<<>>", "WooHoo"));
