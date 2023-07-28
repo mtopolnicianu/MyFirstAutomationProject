@@ -5,6 +5,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        JavaArraysExercises.arraysSecondEx();
+
 //        JavaIfElseAndSwitchForWhileExercises.firstExercise();
 //        JavaIfElseAndSwitchForWhileExercises.secondExercise();
 //        JavaIfElseAndSwitchForWhileExercises.thirdExercise();
@@ -17,7 +20,7 @@ public class Main {
 //        JavaIfElseAndSwitchForWhileExercises.ifElseExerciseFromTasks();
 //        JavaIfElseAndSwitchForWhileExercises.forEachLoopExerciseThree();
 //        JavaIfElseAndSwitchForWhileExercises.forLoopNested();
-        JavaIfElseAndSwitchForWhileExercises.switchString("B");
+//        JavaIfElseAndSwitchForWhileExercises.switchString("B");
 //        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
 //        JavaIfElseAndSwitchForWhileExercises.flowControlExerciseOne();
 //        JavaIfElseAndSwitchForWhileExercises.firstExampleWithForLoop();
@@ -79,6 +82,7 @@ public class Main {
 //        System.out.println(JavaBooleansExercises.realLifeExampleWithBoolean(32, 18));
 //        System.out.println(JavaBooleansExercises.booleanExercise());
 //        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
+
 
 //        Car myCar = new Car("Tim's car");
 //        Car anotherCar = new Car("The Batmobile");
