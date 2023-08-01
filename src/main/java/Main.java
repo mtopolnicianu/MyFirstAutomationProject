@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        JavaArraysExercises.arrayExercise19();
+        JavaArraysExercises.arraysChallengeExercise2();
 
 //        JavaIfElseAndSwitchForWhileExercises.firstExercise();
 //        JavaIfElseAndSwitchForWhileExercises.secondExercise();

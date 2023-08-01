@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 import static java.util.Arrays.binarySearch;
@@ -354,6 +356,257 @@ public class JavaArraysExercises {
         System.out.println(car.toString());
         //implicitly
         System.out.println(car);
+    }
+
+    public static void arrayExercise20() {
+        int[] grades1 = {1, 2, 3, 72, 5};
+        int[] grades2 = {1, 2, 3, 72, 5};
+        if (grades1 == grades2) {
+            System.out.println("equal");
+        }
+        if (grades1.equals(grades2)) {
+            System.out.println("equals");
+        }
+        System.out.println(grades1 + " " + grades2);
+        if (Arrays.equals(grades1, grades2)) {
+            System.out.println("equals finally!");
+        }
+    }
+
+    //Array.fill method
+    public static void fillArrayExercise1() {
+        int[] grades = {1, 2, 3, 72, 5};
+        Arrays.fill(grades, 72);
+        System.out.println(Arrays.toString(grades));
+
+        String[] grade1 = new String[5];
+        Arrays.fill(grade1, "");
+        System.out.println(Arrays.toString(grade1));
+    }
+
+    public static void fillArrayExercise2() {
+        int[] arr1 = new int[5];
+        int[] arr2 = Arrays.copyOf(arr1, arr1.length);
+        System.out.println(arr2);
+        arr2[2] = 47;
+        for (int i : arr1) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i : arr2) {
+            System.out.print(i + " ");
+        }
+    }
+
+    //TwoDArray
+    public static void twodArray() {
+        int[][] worldPopulation = {//states for Country1 ->    0     1     2   3     4     5   6
+                {1234, 4256, 2345, 8763, 8977, 9900, 4945},    //0 -> Country1
+                {2456, 8766, 9992, 2345},                      //1 -> Country2
+                {23454, 9944, 30003, 7799, 7344}                  //2 -> Country3
+        };
+        System.out.println("worldPopulation is: " + worldPopulation + "and size is: " + worldPopulation.length);
+        System.out.println("worldPopulation[0] is: " + worldPopulation[0] + "and size is: " + worldPopulation[0].length);
+        System.out.println("worldPopulation[1] is: " + worldPopulation[1] + "and size is: " + worldPopulation[1].length);
+        System.out.println("worldPopulation[2] is: " + worldPopulation[2] + "and size is: " + worldPopulation[2].length);
+        System.out.println("worldPopulation[0][0] : " + worldPopulation[0][0]);
+        //Read Single Element
+        System.out.println("worldPopulation[1][2] : " + worldPopulation[1][2]);
+
+        //Write/Update Data
+        worldPopulation[1][2] = 7777;
+        System.out.println("==Re Reading==");
+        System.out.println("worldPopulation[1][2] :" + worldPopulation[1][2]);
+
+        //Read All
+        for (int i = 0; i < worldPopulation.length; i++) { //0 to 2
+            for (int j = 0; j < worldPopulation[i].length; j++) {
+                System.out.println(worldPopulation[i][j] + " ");
+            }
+            System.out.println();
+        }
+        //3 1-D arrays with 5 elements each
+        int[][] arr = new int[3][5];
+        System.out.println();
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.println(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        //Giving Size, we need to put the data later. Hence data initially would be 0.
+        //Giving Data First, we need to give any size!!
+        //Explore Enhanced For Loop on 2-D Array
+
+    }
+
+    // Operations With Arrays
+    public static void twoDarrayExerciseWithOperator() {
+        int[][] a = {
+                {1, 1, 1},
+                {1, 1, 1},
+                {1, 1, 1}
+        };
+        int[][] b = {
+                {2, 2, 2},
+                {2, 2, 2},
+                {2, 2, 2}
+        };
+        System.out.println("==Matrix A==");
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("==Matrix B==");
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                System.out.print(b[i][j]);
+            }
+            System.out.println();
+        }
+
+        int[][] c = new int[3][3];
+        for (int i = 0; i < c.length; i++) {
+            for (int j = 0; j < c.length; j++) {
+                c[i][j] = a[i][j] + b[i][j];
+            }
+            System.out.println();
+        }
+        System.out.println("==Matrix C==");
+        for (int i = 0; i < c.length; i++) {
+            for (int j = 0; j < c.length; j++) {
+                System.out.print(c[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void arraysSearchExample1() {
+        int[] nums = new int[]{54, 2, 6, 99, 390, 290, 3, 1, 0, -59, 392, 60};
+        int numsToFind = 1;
+        //with linear search
+        for (int i = 0; i < nums.length; i++) {
+            int val = nums[i];
+            if (val == numsToFind) {
+                System.out.println("we found it at position " + i);
+            }
+        }
+        //with binarySearch
+        Arrays.sort(nums);
+        System.out.println(Arrays.toString(nums));
+        int position = Arrays.binarySearch(nums, numsToFind);
+        System.out.println("Binary search found it at: " + position);
+    }
+
+    public static void fillArrayExercise() {
+        Scanner keyboard = new Scanner(System.in);
+        int[] numbers = new int[5];
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Enter number " + (i + 1) + ": ");
+            numbers[i] = keyboard.nextInt();
+        }
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Index " + i + " has the value of " + numbers[i]);
+        }
+    }
+
+    public static void arraysSortFillCopyOfPractice() {
+        int[] firstArray = getRandomArray(10);
+        System.out.println(Arrays.toString(firstArray));
+        Arrays.sort(firstArray);
+        System.out.println(Arrays.toString(firstArray));
+
+        //using fill method
+        int[] secondArray = new int[10];
+        System.out.println(Arrays.toString(firstArray));
+        Arrays.fill(secondArray, 5);
+        System.out.println(Arrays.toString(secondArray));
+
+        int[] thirdArray = getRandomArray(10);
+        System.out.println(Arrays.toString(thirdArray));
+
+        int[] fourthArray = Arrays.copyOf(thirdArray, thirdArray.length);
+        System.out.println(Arrays.toString(fourthArray));
+
+        int[] smallerArray = Arrays.copyOf(thirdArray, 5);
+        System.out.println(Arrays.toString(smallerArray));
+        int[] largerArray = Arrays.copyOf(thirdArray, 15);
+        System.out.println(Arrays.toString(largerArray));
+
+        String[] sArray = {"Abel", "Dan", "Ela", "Samuel", "Max"};
+        Arrays.sort(sArray);
+        System.out.println(Arrays.toString(sArray));
+        if (Arrays.binarySearch(sArray, "Ela") >= 0) {
+            System.out.println("Found Ela in the list");
+        }
+
+        int[] s1 = {1, 2, 3, 4, 5};
+        int[] s2 = {1, 2, 3, 4, 5};
+        if (Arrays.equals(s1, s2)) {
+            System.out.println("Arrays are equals");
+        } else {
+            System.out.println("Arrays are not equal");
+        }
+    }
+
+    public static void arraysChallengeExercise1() {
+        Integer[] arr1 = {1, 65, 3, 8, 555, 861, 34, 100};
+        System.out.println(Arrays.toString(arr1));
+
+        Arrays.sort(arr1, Collections.reverseOrder());
+        System.out.printf("Modified arr[]: %s", Arrays.toString(arr1));
+    }
+
+    public static void arraysChallengeExercise2() {
+        int[] unsortedArray = getRandomArray1(5);
+        System.out.println(Arrays.toString(unsortedArray));
+
+        int[] sortedArray = sortIntegers(new int[]{7, 30, 35});
+        System.out.println(Arrays.toString(sortedArray));
+
+    }
+
+    public static int[] getRandomArray1(int len1) {
+        Random random = new Random();
+        int[] randomArray = new int[len1];
+        for (int i = 0; i < len1; i++) {
+            randomArray[i] = random.nextInt(1000);
+        }
+        return randomArray;
+    }
+
+    private static int[] sortIntegers(int[] array) {
+        System.out.println(Arrays.toString(array));
+        int[] sortedArray = Arrays.copyOf(array, array.length);
+        boolean flag = true;
+        int temp;
+        while (flag) {
+
+            flag = false;
+            for (int i = 0; i < sortedArray.length - 1; i++) {
+                if (sortedArray[i] < sortedArray[i + 1]) {
+                    temp = sortedArray[i];
+                    sortedArray[i] = sortedArray[i + 1];
+                    sortedArray[i + 1] = temp;
+                    flag = true;
+                    System.out.println("----->" + Arrays.toString(sortedArray));
+                }
+            }
+            System.out.println("----->" + Arrays.toString(sortedArray));
+        }
+        return sortedArray;
+    }
+
+    private static int[] getRandomArray(int len2) {
+        Random random = new Random();
+        int[] newInt = new int[len2];
+        for (int i = 0; i < len2; i++) {
+            newInt[i] = random.nextInt(100);
+        }
+        return newInt;
     }
 }
 
