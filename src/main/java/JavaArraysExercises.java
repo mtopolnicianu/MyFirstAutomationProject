@@ -484,6 +484,24 @@ public class JavaArraysExercises {
         }
     }
 
+    public static void arraysTwoDimensionalExercise() {
+        int[][] array2 = new int[4][4];
+        System.out.println(Arrays.toString(array2));
+        System.out.println("arrays.length = " + array2.length);
+
+        for (int[] outer : array2) {
+            System.out.println(Arrays.toString(outer));
+
+        }
+        for (int i = 0; i < array2.length; i++) {
+            for (int j = 0; j < array2.length; j++) {
+                System.out.print(array2[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
     public static void arraysSearchExample1() {
         int[] nums = new int[]{54, 2, 6, 99, 390, 290, 3, 1, 0, -59, 392, 60};
         int numsToFind = 1;
@@ -607,6 +625,101 @@ public class JavaArraysExercises {
             newInt[i] = random.nextInt(100);
         }
         return newInt;
+    }
+
+    public static void multiDimensionalArrayExercise() {
+        int nums[][] = new int[3][4];
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                nums[i][j] = (int) (Math.random() * 100);
+                System.out.println(nums[i][j]);
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(nums[i][j] + " ");
+            }
+            System.out.println();
+        }
+        for (int n[] : nums) {
+            for (int m : n) {
+                System.out.println(m + " ");
+            }
+        }
+    }
+
+    public static void multidimensionalArrayExercise1() {
+        Object[] anyArray = new Object[3];
+        System.out.println(Arrays.toString(anyArray));
+
+        anyArray[0] = new String[]{"a", "b", "c"};
+        System.out.println(Arrays.deepToString(anyArray));
+
+        anyArray[1] = new String[][]{
+                {"1", "2"},
+                {"3", "4", "5"},
+                {"6", "7", "8", "9"}
+        };
+        System.out.println(Arrays.deepToString(anyArray));
+
+        anyArray[2] = new int[2][2][2];
+
+        System.out.println(Arrays.deepToString(anyArray));
+        for (Object element : anyArray) {
+            System.out.println("Element type = " + element.getClass().getSimpleName());
+            System.out.println("Element toString() = " + element);
+            System.out.println(Arrays.deepToString((Object[]) element));
+        }
+    }
+
+    //    public static void main (String... args){
+//        System.out.println("Hello World again");
+//        String[] splitStrings = "Hello World again".split(" ");
+//        printText(splitStrings);
+//
+//       String[] sArray = {"first", "second", "third", "fourth", "fifth"};
+//        System.out.println(String.join(",", sArray));
+//    }
+//
+//    private static void printText(String... textList){
+//        for (String t : textList){
+//            System.out.println(t);
+//        }
+//    }
+    public static void main(String[] args) {
+        int[] returnedArray = readIntegers();
+        System.out.println(Arrays.toString(returnedArray));
+        int returnedMin = findMin(returnedArray);
+        System.out.println("min = " + returnedMin);
+
+    }
+
+    private static int[] readIntegers() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a list of integers, separated by commas: ");
+        String input = scanner.nextLine();
+
+        String[] splits = input.split(",");
+        int[] values = new int[splits.length];
+
+        for (int i = 0; i < splits.length; i++) {
+            values[i] = Integer.parseInt(splits[i].trim());
+        }
+        return values;
+    }
+
+    private static int findMin(int[] array) {
+        int min = Integer.MIN_VALUE;
+        for (int el : array) {
+            if (el < min) {
+                min = el;
+            }
+        }
+        return min;
     }
 }
 
