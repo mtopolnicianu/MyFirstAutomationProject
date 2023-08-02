@@ -1,12 +1,12 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Random;
-import java.util.Scanner;
+import javax.crypto.spec.PSource;
+import java.lang.reflect.Array;
+import java.util.*;
 
 import static java.util.Arrays.binarySearch;
 import static java.util.Arrays.copyOf;
 
 public class JavaArraysExercises {
+
     public static void arraysExercise() {
         // Let us create different types of arrays and
         // print their contents using Arrays.toString()
@@ -44,8 +44,7 @@ public class JavaArraysExercises {
     public static void arraysSecondEx() {
         int arr[] = {5, 12, 4, 21, 8, 2, 3, 7, 9, 11};
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0)
-                System.out.println(arr[i]);
+            if (arr[i] % 2 == 0) System.out.println(arr[i]);
         }
         for (int j = 0; j < arr.length; j++) {
             if (arr[j] % 2 != 0) { //odd check
@@ -443,16 +442,8 @@ public class JavaArraysExercises {
 
     // Operations With Arrays
     public static void twoDarrayExerciseWithOperator() {
-        int[][] a = {
-                {1, 1, 1},
-                {1, 1, 1},
-                {1, 1, 1}
-        };
-        int[][] b = {
-                {2, 2, 2},
-                {2, 2, 2},
-                {2, 2, 2}
-        };
+        int[][] a = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+        int[][] b = {{2, 2, 2}, {2, 2, 2}, {2, 2, 2}};
         System.out.println("==Matrix A==");
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
@@ -658,11 +649,7 @@ public class JavaArraysExercises {
         anyArray[0] = new String[]{"a", "b", "c"};
         System.out.println(Arrays.deepToString(anyArray));
 
-        anyArray[1] = new String[][]{
-                {"1", "2"},
-                {"3", "4", "5"},
-                {"6", "7", "8", "9"}
-        };
+        anyArray[1] = new String[][]{{"1", "2"}, {"3", "4", "5"}, {"6", "7", "8", "9"}};
         System.out.println(Arrays.deepToString(anyArray));
 
         anyArray[2] = new int[2][2][2];
@@ -721,5 +708,110 @@ public class JavaArraysExercises {
         }
         return min;
     }
+
+    public static void arrayVsArrayListExercise1() {
+        //declaring an Array
+        String[] friendsArray = new String[4];
+        String[] friendsArray2 = {"John", "Chris", "Mark", "Luke"};
+
+        //declaring an ArrayList
+        ArrayList<String> friendsArrayList = new ArrayList<>();
+        ArrayList<String> friendsArrayList2 = new ArrayList<>(Arrays.asList("John", "Chris", "Mark", "Luke"));
+
+        //Get element
+        System.out.println(friendsArray2[2]);
+        System.out.println(friendsArrayList2.get(2));
+
+        //Get size
+        System.out.println(friendsArray2.length);
+        System.out.println(friendsArrayList2.size());
+
+        //Add an element
+        friendsArrayList2.add("Mitch");
+        System.out.println(friendsArrayList2.get(4));
+
+        //Set an element
+        friendsArray2[0] = "Carl";
+        System.out.println(friendsArray2[0]);
+        friendsArrayList2.set(0, "Carl");
+        System.out.println(friendsArrayList2.get(0));
+
+        //Remove an element
+        //for Arrays we can't do it, due to its fixed size
+        friendsArrayList2.remove("Chris");
+        System.out.println(friendsArrayList2.get(1));
+
+        //Print
+        System.out.println(friendsArray2);
+        System.out.println(friendsArrayList2);
+
+    }
+
+    public static void listExample1() {
+        List myList = new ArrayList();
+        myList.add("Object 1");
+        myList.add("Object 2");
+        myList.add("Object 3");
+
+        myList.clear();
+    }
+
+    public static void listExample2() {
+        List<String> myList = new ArrayList<>();
+
+        myList.add("Object 1");
+        myList.add("Object 2");
+        myList.add("Object 3");
+
+        String myString = myList.get(0);
+
+        Iterator<String> iterator = myList.iterator();
+        while (iterator.hasNext()) {
+            String next = iterator.next();
+        }
+        for (String next : myList) {
+            System.out.println(next);
+        }
+    }
+
+    public static void listVsArrayList() {
+        int[] ints = new int[]{1, 2, 3};
+        List<Integer> intsList = new LinkedList<>(); //new ArrayList<>();
+
+        List<Integer> intsList2 = new ArrayList<>();
+        intsList2.add(5);
+        intsList2.add(10);
+
+        ArrayList<Integer> intsList3 = new ArrayList<>();
+        intsList3.add(13);
+        intsList3.add(8);
+        System.out.println(intsList2);
+        System.out.println(intsList3);
+
+    }
+
+    public static void listVsArrayList2() {
+
+        //list
+        String[] fruits = new String[3];
+        fruits[0] = "Mango";
+        fruits[1] = "Apple";
+        fruits[2] = "Strawberry";
+        System.out.println(fruits[1]);
+
+        //ArrayList
+        ArrayList fruitsList = new ArrayList<>();
+        fruitsList.add("Mango");
+        fruitsList.add("Apple");
+        fruitsList.add("Strawberry");
+        fruitsList.add("Watermelon");
+        fruitsList.remove("Strawberry");
+        System.out.println(fruitsList.contains("Raspberry"));
+        fruitsList.clear();
+        System.out.println(fruitsList);
+    }
+
 }
+
+
 
