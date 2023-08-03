@@ -1,5 +1,5 @@
-import javax.crypto.spec.PSource;
-import java.lang.reflect.Array;
+import jdk.internal.org.objectweb.asm.tree.IntInsnNode;
+
 import java.util.*;
 
 import static java.util.Arrays.binarySearch;
@@ -809,8 +809,160 @@ public class JavaArraysExercises {
         System.out.println(fruitsList.contains("Raspberry"));
         fruitsList.clear();
         System.out.println(fruitsList);
+
     }
 
+    public static void arrayListExercise3() {
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Mazda");
+        System.out.println(cars);
+        System.out.println(cars.get(2));
+        cars.set(1, "Opel");
+        System.out.println(cars.get(1));
+        System.out.println(cars);
+        System.out.println(cars.size());
+    }
+
+    //Loop Through an ArrayList
+    public static void arrayListExercise4() {
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("kiwi");
+        fruits.add("pear");
+        fruits.add("banana");
+//        for ( int i = 0; i < fruits.size(); i++){
+//            System.out.print(fruits.get(i) + " ");
+//        }
+        //or we can also loop through an ArrayList with the for-each loop:
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+
+        }
+    }
+
+    public static void arrayListExercise5() {
+        ArrayList<Integer> myNumbers = new ArrayList<>();
+        myNumbers.add(10);
+        myNumbers.add(5);
+        myNumbers.add(111);
+        myNumbers.add(99);
+        for (int i : myNumbers
+        ) {
+            System.out.println(i);
+
+        }
+    }
+
+    public static void arrayListExercise6() {
+        ArrayList<String> cars = new ArrayList<>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Jaguar");
+        cars.add("Mazda");
+        Collections.sort(cars);  // Sort cars
+        for (String car : cars) {
+            System.out.println(car);
+        }
+    }
+
+    public static void arrayListExercise7() {
+        ArrayList<Integer> myNumbers = new ArrayList<>();
+        myNumbers.add(101);
+        myNumbers.add(4);
+        myNumbers.add(88);
+        myNumbers.add(20);
+
+        Collections.sort(myNumbers);
+        for (int myNumber : myNumbers) {
+            System.out.println(myNumber);
+        }
+    }
+
+    public static void linkedListExample1() {
+        LinkedList<String> namesLinkedList = new LinkedList<>();
+        namesLinkedList.add("John");
+        namesLinkedList.add("Paul");
+        namesLinkedList.add("Ringo");
+        namesLinkedList.add("George");
+
+        ArrayList<String> namesArrayList = new ArrayList<>();
+        namesArrayList.add("John");
+        namesArrayList.add("Paul");
+        namesArrayList.add("Ringo");
+        namesArrayList.add("George");
+    }
+
+    public static void linkedListExampleWithIterator() {
+        LinkedList<String> linky = new LinkedList<>();
+        linky.add("Rob");
+        linky.add("Alex");
+        linky.add("Ela");
+
+        System.out.println(linky.getFirst());
+        //      System.out.println(linky.isEmpty());
+
+        Iterator iterator = linky.iterator();
+        while (iterator.hasNext()) {
+            if ((int) iterator.next() == 78) {
+                System.out.println("We found 78");
+            }
+
+        }
+    }
+
+    public static void testIterator(){
+      ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(34);
+        arr.add(870);
+        arr.add(8);
+        arr.add(15);
+        arr.add(160);
+
+        //Getting Iterator from ArrayList to travers elements
+        Iterator<Integer> i =arr.iterator();
+        while (i.hasNext()){
+            System.out.println(i.next());
+        }
+    }
+
+    public static void iteratorsExercise1(){
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(3);
+        list.add(17);
+        list.add(100);
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+        Iterator<Integer> iterator2 = list.iterator();
+       iterator2.next();
+       iterator2.remove();
+        System.out.println(list);
+    }
+
+    public static void autoboxingAndUnboxingExercise1(){
+        Integer boxedInt = Integer.valueOf(15);
+        Integer depricatedBoxing = new Integer(15);
+        int unboxingInt = boxedInt.intValue();
+
+        //Automatic
+        Integer autoBoxed = 15;
+        int autoUnboxed = autoBoxed;
+        System.out.println(autoBoxed.getClass().getName());
+      //  System.out.println(autoUnboxed.getClass().getName());
+        Double resultBoxed = getLiteralDoublePrimitive();
+        double resultUnboxed = getDoubleObject();
+    }
+    private static Double getDoubleObject(){
+        return Double.valueOf(100.00);
+
+    }
+    private static double getLiteralDoublePrimitive(){
+        return 100.00;
+    }
 }
 
 
