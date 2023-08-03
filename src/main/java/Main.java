@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        JavaArraysExercises.listVsArrayList2();
+        JavaArraysExercises.autoboxingAndUnboxingExercise1();
 //        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
 
 //        Car myCar = new Car("Tim's car");
@@ -21,6 +21,7 @@ public class Main {
 //        anotherCar.brake();
 
     }
+
     private static void doubleResult() {
         double result1 = 0.1 * 7;
         double result2 = 0.1 + 0.1 + 0.1 + 0.1;
