@@ -1,7 +1,6 @@
-import jdk.internal.org.objectweb.asm.tree.IntInsnNode;
-
 import java.util.*;
 
+import static java.lang.Integer.parseInt;
 import static java.util.Arrays.binarySearch;
 import static java.util.Arrays.copyOf;
 
@@ -694,7 +693,7 @@ public class JavaArraysExercises {
         int[] values = new int[splits.length];
 
         for (int i = 0; i < splits.length; i++) {
-            values[i] = Integer.parseInt(splits[i].trim());
+            values[i] = parseInt(splits[i].trim());
         }
         return values;
     }
@@ -913,8 +912,8 @@ public class JavaArraysExercises {
         }
     }
 
-    public static void testIterator(){
-      ArrayList<Integer> arr = new ArrayList<>();
+    public static void testIterator() {
+        ArrayList<Integer> arr = new ArrayList<>();
         arr.add(34);
         arr.add(870);
         arr.add(8);
@@ -922,28 +921,28 @@ public class JavaArraysExercises {
         arr.add(160);
 
         //Getting Iterator from ArrayList to travers elements
-        Iterator<Integer> i =arr.iterator();
-        while (i.hasNext()){
+        Iterator<Integer> i = arr.iterator();
+        while (i.hasNext()) {
             System.out.println(i.next());
         }
     }
 
-    public static void iteratorsExercise1(){
+    public static void iteratorsExercise1() {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(3);
         list.add(17);
         list.add(100);
         Iterator<Integer> iterator = list.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
         Iterator<Integer> iterator2 = list.iterator();
-       iterator2.next();
-       iterator2.remove();
+        iterator2.next();
+        iterator2.remove();
         System.out.println(list);
     }
 
-    public static void autoboxingAndUnboxingExercise1(){
+    public static void autoboxingAndUnboxingExercise1() {
         Integer boxedInt = Integer.valueOf(15);
         Integer depricatedBoxing = new Integer(15);
         int unboxingInt = boxedInt.intValue();
@@ -952,16 +951,174 @@ public class JavaArraysExercises {
         Integer autoBoxed = 15;
         int autoUnboxed = autoBoxed;
         System.out.println(autoBoxed.getClass().getName());
-      //  System.out.println(autoUnboxed.getClass().getName());
+        //  System.out.println(autoUnboxed.getClass().getName());
         Double resultBoxed = getLiteralDoublePrimitive();
         double resultUnboxed = getDoubleObject();
     }
-    private static Double getDoubleObject(){
+
+    private static Double getDoubleObj() {
         return Double.valueOf(100.00);
 
     }
-    private static double getLiteralDoublePrimitive(){
+
+    private static double getLiteralDoublePrimitive() {
         return 100.00;
+    }
+
+    public static void wrapperClassExercise1() {
+        Integer myInt = 5;
+        Double myDouble = 5.99;
+        Character myChar = 'A';
+        System.out.println(myInt.intValue());
+        System.out.println(myDouble.doubleValue());
+        System.out.println(myChar.charValue());
+    }
+
+    public static void wrapperClassExample1() {
+        Integer myInt = 100;
+        String myString = myInt.toString();
+        System.out.println(myString.length());
+    }
+
+    public static void wrapperClassExample2() {
+        int a = 20;
+        Integer i = a; //Converting int into Integer
+        Integer j = new Integer(10);
+        System.out.println(a + " " + i + " " + j);
+    }
+
+    public static void unboxingExample() {
+        Character ch = 'a';
+
+        //unboxing - Character object to primitive conversion
+        // char a = ch;
+        char a = new Character('a');
+        System.out.println("Character ch: " + ch);
+        System.out.println("char a: " + a);
+    }
+
+    public static void unboxingAndAutoboxingExample() {
+        int i = 100;
+        Integer iobject = Integer.valueOf(i);
+        Integer iobject1 = i; //Autoboxing
+        System.out.println(iobject);
+        System.out.println(iobject1 + iobject);
+
+        Integer iobject2 = new Integer(100);
+        int object3 = iobject2.intValue();
+        int object4 = iobject2;
+        System.out.println(object3 + object4);
+    }
+
+    public static void wrapperClassAutoboxingExercise() {
+        int i = 5;
+//        Integer ii = new Integer(i); //Boxing = Wrapping
+        Integer ii = new Integer(5);// Wrapper class
+
+        int j = ii.intValue();//unboxing - unwrapping
+
+        Integer value = i; //Autoboxing
+        int k = value;//Autoboxing
+
+        String str = "123";
+        int n = Integer.parseInt(str);
+        System.out.println(n);
+
+    }
+
+    public static <var> void autoboxingUnboxingExample() {
+        Integer boxedInt = Integer.valueOf(15);
+        Integer depricatedBoxing = new Integer(100);
+        int unboxingInt = boxedInt.intValue();
+
+        //Automatic
+        Integer autoBoxed = 100;
+        int autoUnboxed = autoBoxed;
+        System.out.println(autoBoxed.getClass().getName());
+
+        Double resultBoxed1 = getDoublePrimitive();
+        double resultUnboxed = getDoubleObject();
+
+        Integer[] wrapperArray = new Integer[5];
+        wrapperArray[0] = 50;
+        System.out.println(Arrays.toString(wrapperArray));
+
+        System.out.println(wrapperArray[0].getClass().getName());// confirm that the first element is java.lang.Integer
+
+        Character[] characterArray = {'a', 'b', 'c', 'd'};
+        System.out.println(Arrays.toString(characterArray));
+
+        ArrayList<Integer> ourList = getList(1, 2, 3, 4, 5);
+
+    }
+
+    private static ArrayList<Integer> getList(Integer... varargs) {
+
+        ArrayList<Integer> aList = new ArrayList<>();
+        for (int i : varargs) {
+            aList.add(i);
+        }
+
+        return aList;
+    }
+
+    private static int returnAnInt(Integer i) {
+
+        return i;
+    }
+
+    private static Integer returnAnInteger(int i) {
+
+        return i;
+    }
+
+    private static Double getDoubleObject() {
+
+        return Double.valueOf(167.00);
+    }
+
+    private static double getDoublePrimitive() {
+
+        return 82.77;
+    }
+
+    public static void enumTypeExercise() {
+        DayOfTheWeek weekDay = DayOfTheWeek.TUES;
+        System.out.println(weekDay);
+
+        for (int i = 0; i < 10; i++) {
+            weekDay = getRandomDay();
+//
+//            System.out.printf("Name is %s, Ordinal Value = %d%n",
+//                    weekDay.name(), weekDay.ordinal());
+//
+//            if (weekDay == DayOfTheWeek.FRI){
+//                System.out.println("Found a Friday!!!");
+            switchDayOfWeek(weekDay);
+        }
+        for (Topping topping : Topping.values()) {
+            System.out.println(topping.name() + " : " + topping.getPrice());
+        }
+    }
+
+    public static void switchDayOfWeek(DayOfTheWeek weekDay) {
+        int weekDayInteger = weekDay.ordinal() + 1;
+        switch (weekDay) {
+            case FRI:
+                System.out.println("Friday is Day " + weekDayInteger);
+            case TUES:
+                System.out.println("Tuesday is Day " + weekDayInteger);
+            case MON:
+                System.out.println("Monday is Day " + weekDayInteger);
+            default:
+                System.out.println(weekDay.name().charAt(0) + weekDay.name().substring(1).toLowerCase() + "day is Day " + weekDayInteger);
+        }
+    }
+
+    public static DayOfTheWeek getRandomDay() {
+        int randomInteger = new Random().nextInt(7);
+        DayOfTheWeek[] allDays = DayOfTheWeek.values();
+        return allDays[randomInteger];
     }
 }
 

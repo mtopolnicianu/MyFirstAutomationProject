@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -6,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        JavaArraysExercises.autoboxingAndUnboxingExercise1();
+        JavaArraysExercises.enumTypeExercise();
 //        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
 
 //        Car myCar = new Car("Tim's car");
@@ -334,6 +335,7 @@ public class Main {
 }
 
 
+
 class Car {
     private int speed = 0;
     private String name;
@@ -356,6 +358,5 @@ class Car {
         System.out.printf("%s is going %d miles per hour.%n", name, speed);
     }
 }
-
 
 
