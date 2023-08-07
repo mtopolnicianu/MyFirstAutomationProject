@@ -1,2 +1,4 @@
 out/
 .idea
+# Ignore all .class files
+*.class

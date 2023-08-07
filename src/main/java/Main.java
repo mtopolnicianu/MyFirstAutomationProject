@@ -7,7 +7,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-        JavaArraysExercises.enumTypeExercise();
+//        JavaArraysExercises.enumTypeExercise();
+        int[] a=new int [] {1,2,3,5};
+        System.out.println(JavaArraysExercises.sameFirstLast(a));
+
 //        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
 
 //        Car myCar = new Car("Tim's car");
