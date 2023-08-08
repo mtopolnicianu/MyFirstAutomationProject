@@ -1,29 +1,134 @@
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Scanner;
+
 
 public class Main {
+    private static final String ROAD = "|                             |";
+    private static final String CAR_SYMBOL = "V";
 
+    // Control keys
+    private static final char LEFT = 'a';
+    private static final char STRAIGHT = 's';
+    private static final char RIGHT = 'd';
+    private static final char ACCELERATE = 'w';
+    private static final char BRAKE = 'x';
+    private static final char INFO = 'i';
+    private static final char QUIT = 'q';
+
+    private static final StringBuilder BUILDER = new StringBuilder();
 
     public static void main(String[] args) {
 
+//        final  String COMPANY_NAME = "Neso Academy";
+//        System.out.println(COMPANY_NAME);
+//        final String COMPANY_NAME;
+//        COMPANY_NAME = "Another Name";
 
+        JavaMethodsExercises.myMethod();
+
+//        int d = 5;
+//        JavaMethodsExercises.add(3, 4);
 //        JavaArraysExercises.enumTypeExercise();
-        int[] a=new int [] {1,2,3,5};
-        System.out.println(JavaArraysExercises.sameFirstLast(a));
+//        int[] a=new int [] {1,2,3,5};
+//        System.out.println(JavaArraysExercises.sameFirstLast(a));
 
 //        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
 
 //        Car myCar = new Car("Tim's car");
 //        Car anotherCar = new Car("The Batmobile");
-//
-//        myCar.accelerate();
-//        myCar.accelerate();
-//        myCar.accelerate();
-//        myCar.accelerate();
-//        myCar.brake();
-//        myCar.accelerate();
-//        anotherCar.brake();
 
+//
+//        myCar.accelerate(5);
+//        myCar.accelerate(30);
+//        myCar.accelerate(40);
+//        myCar.accelerate(44);
+//        myCar.accelerate(12);
+//        myCar.brake(4);
+//        anotherCar.brake(15);
+
+        Scanner scanner = new Scanner(System.in);
+        Car batmobile = new Car("The Batmobile");
+
+        char control;
+        boolean playing = true;
+        int accelerationFactor = 1;
+        int carPosition = 15;
+
+        // Instructions
+        System.out.println("Welcome to the Console Grand Prix");
+        System.out.println("=================================");
+        System.out.println();
+        System.out.printf("Control your car by pressing '%s' to go left, and '%s' to go right.%n", LEFT, RIGHT);
+        System.out.printf("'%s' will go straight.%n", STRAIGHT);
+        System.out.println();
+        System.out.println("The faster your car's going, the further down the track it");
+        System.out.println("will travel in the chosen direction.  Watch out for the bends!");
+        System.out.println();
+        System.out.println("Choose the acceleration/deceleration factor by pressing a number key.");
+        System.out.printf("You can press a number key anytime before using '%s' or '%s'.%n", ACCELERATE, BRAKE);
+        System.out.printf("Pressing '%s' will accelerate by that amount,%n", ACCELERATE);
+        System.out.printf("'%s' will brake by that amount.%n", BRAKE);
+        System.out.println();
+        System.out.println("Your car starts off stationary, so you'll need to accelerate before you can move.");
+        System.out.println();
+        System.out.printf("Press '%s' to find out your current speed.%n", INFO);
+        System.out.println();
+        System.out.printf("'%s' will quit.%n", QUIT);
+
+        do {
+            control = scanner.nextLine().toLowerCase().charAt(0);
+            if (Character.isDigit(control)) {
+                accelerationFactor = control - '0';
+            } else {
+                switch (control) {
+                    case LEFT:
+                        for (int i = 0; i < batmobile.getSpeed(); i++) {
+                            carPosition--;
+                            if (stillOnTrack(carPosition, ROAD)) {
+                                buildRoad(carPosition);
+                            } else {
+                                System.out.println("Oups! You've crashed! Game over.");
+                            }
+                        }
+                        break;
+                    case STRAIGHT:
+                        for (int i = 0; i < batmobile.getSpeed(); i++) {
+                            buildRoad(carPosition);
+                        }
+
+                        drawRoad();
+                        break;
+                    case RIGHT:
+                        for (int i = 0; i < batmobile.getSpeed(); i++) {
+                            carPosition++;
+                            buildRoad(carPosition);
+                        }
+
+                        drawRoad();
+                        break;
+                    case ACCELERATE:
+                        batmobile.accelerate(accelerationFactor);
+                        break;
+                    case BRAKE:
+                        batmobile.brake(accelerationFactor);
+                        break;
+                    case INFO:
+                        batmobile.showSpeed();
+                        break;
+                    case QUIT:
+                        playing = false;
+                        break;
+                }
+            }
+        } while (playing);
+
+        scanner.close();
+    }
+
+    private static boolean stillOnTrack(int position, String road) {
+        return (position < road.length() && road.charAt(position) == ' ');
     }
 
     private static void doubleResult() {
@@ -335,8 +440,21 @@ public class Main {
         System.out.println(str.substring(7, 10));
 
     }
-}
 
+    private static void drawRoad() {
+        System.out.println(BUILDER.toString());
+    }
+
+    private static void buildRoad(int carPosition) {
+        //insert car symbol in the "road"
+        String roadLine = ROAD.substring(0, carPosition) + CAR_SYMBOL + ROAD.substring(carPosition);
+
+        //add to builder with line separator
+        BUILDER.append(roadLine);
+        BUILDER.append(System.lineSeparator());
+
+    }
+}
 
 
 class Car {
@@ -347,18 +465,41 @@ class Car {
         name = carName;
     }
 
-    public void accelerate() {
-        speed++;
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void accelerate(int amount) {
+        speed += amount; //speed = speed + amount;
         showSpeed();
     }
 
-    public void brake() {
-        speed--;
+//    public void brake(int speedReduction) {
+//        speed-= speedReduction;
+//
+//        if (speed < 0){
+//            speed =0;
+//        }
+//        showSpeed();
+//    }
+
+//    public void brake(int speedReduction) {
+//        speed-= speedReduction;
+//
+//        if (speed < 0){
+//            speed =0;
+//        }
+//        showSpeed();
+//    }
+
+    public void brake(int speedReduction) {
+        speed = (speed < speedReduction) ? 0 : speed - speedReduction;
+
         showSpeed();
     }
 
-    private void showSpeed() {
-        System.out.printf("%s is going %d miles per hour.%n", name, speed);
+    public void showSpeed() {
+        System.out.printf("%s is going %d miles per hour.%n", name, speed * 10);
     }
 }
 
