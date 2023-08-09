@@ -1,6 +1,4 @@
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -26,27 +24,51 @@ public class Main {
 //        final String COMPANY_NAME;
 //        COMPANY_NAME = "Another Name";
 
-        JavaMethodsExercises.myMethod();
+        JavaMethodsExercises.myMethod("Liam");
+        JavaMethodsExercises.myMethod("Elisa");
+        JavaMethodsExercises.myMethod("Anja");
+        JavaMethodsExercises.printInfo("Ela", 44);
 
-//        int d = 5;
-//        JavaMethodsExercises.add(3, 4);
-//        JavaArraysExercises.enumTypeExercise();
-//        int[] a=new int [] {1,2,3,5};
-//        System.out.println(JavaArraysExercises.sameFirstLast(a));
+        JavaMethodsExercises.checkAge(20);
 
-//        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
+        System.out.println(JavaMethodsExercises.addNumber(55, 180));
 
-//        Car myCar = new Car("Tim's car");
-//        Car anotherCar = new Car("The Batmobile");
+        int num1 = 11;
+        int num2 = 7;
 
-//
-//        myCar.accelerate(5);
-//        myCar.accelerate(30);
-//        myCar.accelerate(40);
-//        myCar.accelerate(44);
-//        myCar.accelerate(12);
-//        myCar.brake(4);
-//        anotherCar.brake(15);
+        int answer1;
+        int answer2;
+        boolean answer3;
+
+        answer1 = JavaMethodsExercises.multiplyNumbers(num1);
+        System.out.println("When we multiply num1 by 7 we get: " + answer1);
+
+        answer2 = JavaMethodsExercises.addNumbers(num1, num2);
+        System.out.println("\nWhen we add num1 and num2 we get: " + answer2);
+
+        answer3 = JavaMethodsExercises.equalNumbers(num1,num2);
+        System.out.println("num1 and num2 are equal: " + answer3);
+
+
+        int d = 5;
+        JavaMethodsExercises.add(3, 4);
+        JavaArraysExercises.enumTypeExercise();
+        int[] a=new int [] {1,2,3,5};
+        System.out.println(JavaArraysExercises.sameFirstLast(a));
+
+        System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
+
+        Car myCar = new Car("Tim's car");
+        Car anotherCar = new Car("The Batmobile");
+
+
+        myCar.accelerate(5);
+        myCar.accelerate(30);
+        myCar.accelerate(40);
+        myCar.accelerate(44);
+        myCar.accelerate(12);
+        myCar.brake(4);
+        anotherCar.brake(15);
 
         Scanner scanner = new Scanner(System.in);
         Car batmobile = new Car("The Batmobile");
