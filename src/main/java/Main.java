@@ -18,6 +18,13 @@ public class Main {
     private static JavaMethodsExercises.MethodOverloading obj = new JavaMethodsExercises.MethodOverloading();
 
     public static void main(String[] args) {
+
+        ClassesMethods class1 = new ClassesMethods();
+        ClassesMethods class2 = new ClassesMethods();
+        class1.printHi();
+
+        Calculator.myMethod();
+
         //Method Overloading
         Eight e1 = new Eight();
         e1.school(2);
