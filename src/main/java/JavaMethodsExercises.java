@@ -64,4 +64,69 @@ public class JavaMethodsExercises {
         }
 
     }
+
+    public static int sum(int x, int y) {
+        return x + y;
+    }
+
+    public static int sum(int x, int y, int z) {
+        return x + y + z;
+    }
+
+    public static void sayHi() {
+        System.out.println("Hi");
+    }
+
+    public static String sayHi(String name) {
+        return "Hi " + name;
+    }
+
+    public static void sayHiii() {
+        System.out.println("Hi");
+    }
+
+    public static String sayHiiii() {
+        return "Hiiii";
+    }
+
+    public static int plusMethodInt(int x, int y) {
+        return x + y;
+
+    }
+
+    public static double plusMethodDouble(double x, double y) {
+        return x + y;
+    }
+
+    public static class MethodOverloading {
+        int num;
+        MethodOverloading(){
+            System.out.println("Default");
+        }
+        MethodOverloading(int x){
+            num = x;
+            System.out.println("Parameterize");
+
+        }
+        MethodOverloading(int x, int y){
+            num =x;
+            System.out.println("Parameterize2");
+        }
+        int add(int x, int y) {
+            return (x + y);
+        }
+        int add(int x, int y, int z){
+            return (x+y+z);
+        }
+        double add(double x, double y){
+            return (x+y);
+        }
+
+    }
+
+
+    public static void main(String[]args){
+
+
+    }
 }
