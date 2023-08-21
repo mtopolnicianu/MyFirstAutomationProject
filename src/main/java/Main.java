@@ -1,7 +1,6 @@
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-
 public class Main {
     private static final String ROAD = "|                             |";
     private static final String CAR_SYMBOL = "V";
@@ -16,20 +15,45 @@ public class Main {
     private static final char QUIT = 'q';
 
     private static final StringBuilder BUILDER = new StringBuilder();
+    private static JavaMethodsExercises.MethodOverloading obj = new JavaMethodsExercises.MethodOverloading();
 
     public static void main(String[] args) {
+        //Method Overloading
+        Eight e1 = new Eight();
+        e1.school(2);
+        e1.school('d', 44.76);
+        Eight.school(45,5);
+        Eight.school('z', 55.233,4);
+        Eight.school(45.5,5);
 
 //        final  String COMPANY_NAME = "Neso Academy";
 //        System.out.println(COMPANY_NAME);
 //        final String COMPANY_NAME;
 //        COMPANY_NAME = "Another Name";
 
-        JavaMethodsExercises.myMethod("Liam");
-        JavaMethodsExercises.myMethod("Elisa");
-        JavaMethodsExercises.myMethod("Anja");
-        JavaMethodsExercises.printInfo("Ela", 44);
+//        JavaMethodsExercises.myMethod("Liam");
+//        JavaMethodsExercises.myMethod("Elisa");
+//        JavaMethodsExercises.myMethod("Anja");
+//        JavaMethodsExercises.printInfo("Ela", 44);
+
+
+        int myNum1 = JavaMethodsExercises.plusMethodInt(8, 5);
+        double myNum2 = JavaMethodsExercises.plusMethodDouble(4.3, 7.88);
+        System.out.println("int: " + myNum1);
+        System.out.println("double: " + myNum2);
+
+
+        int total = obj.add(5, 6, 8);
+        System.out.println("Total is: " + total);
+
+        int total1 = obj.add(3,6,6);
+        System.out.println("Total1 is: " + total1);
+
+        double total2 = obj.add(3.5, 55.5);
+        System.out.println("Total2 is: " + total2);
 
         JavaMethodsExercises.checkAge(20);
+        System.out.println(JavaMethodsExercises.sum(2, 3, 6));
 
         System.out.println(JavaMethodsExercises.addNumber(55, 180));
 
@@ -46,14 +70,14 @@ public class Main {
         answer2 = JavaMethodsExercises.addNumbers(num1, num2);
         System.out.println("\nWhen we add num1 and num2 we get: " + answer2);
 
-        answer3 = JavaMethodsExercises.equalNumbers(num1,num2);
+        answer3 = JavaMethodsExercises.equalNumbers(num1, num2);
         System.out.println("num1 and num2 are equal: " + answer3);
 
 
         int d = 5;
         JavaMethodsExercises.add(3, 4);
         JavaArraysExercises.enumTypeExercise();
-        int[] a=new int [] {1,2,3,5};
+        int[] a = new int[]{1, 2, 3, 5};
         System.out.println(JavaArraysExercises.sameFirstLast(a));
 
         System.out.println(JavaBooleansExercises.anotherExampleWithBoolean());
