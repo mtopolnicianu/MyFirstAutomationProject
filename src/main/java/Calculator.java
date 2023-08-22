@@ -17,4 +17,10 @@ public class Calculator {
         System.out.println(r1);
 
     }
+    static void myMethod(){
+        System.out.println("Hello");
+
+    }
+
+
 }
