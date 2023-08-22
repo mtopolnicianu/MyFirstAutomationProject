@@ -2,6 +2,9 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
+
+    private static Cars cars;
+    private static Bikes bikes;
     private static final String ROAD = "|                             |";
     private static final String CAR_SYMBOL = "V";
 
@@ -19,19 +22,133 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Cars cars = new Cars();
+        Bikes bikes = new Bikes();
+        bikes.kick();
+        cars.key();
+
         ClassesMethods class1 = new ClassesMethods();
         ClassesMethods class2 = new ClassesMethods();
         class1.printHi();
+        ClassesMethods myCar2 = new ClassesMethods();
+        myCar2.speed(55);
+        myCar2.fullThrottle();
 
-        Calculator.myMethod();
+//        Pokemon p1 = new Pokemon();
+//        p1.name = "Pikachu";
+//        p1.level = 10;
+//        System.out.println(p1.name + " " + p1.level);
+//
+//        Pokemon p2 = new Pokemon();
+//        p2.name = "Eve";
+//        p2.level = 33;
+//        System.out.println(p2.name + " " + p2.level);
+//        p2.attack();
+
+
+        Pokemon p3 = new Pokemon("Eve", 25);
+        Student student = new Student();
+        student.id = 11;
+        student.name = "Ella";
+        student.age = 34;
+        System.out.println(" Name: " + student.name + " Age: " + student.age + "ID: " + student.id);
+
+        Scanner s = new Scanner(System.in);
+        Cars car1 = new Cars();
+        Cars car2 = new Cars();
+        Cars car3 = new Cars();
+        Cars car4 = new Cars();
+        Cars car5 = new Cars();
+        Bikes bike1 = new Bikes();
+        Bikes bike2 = new Bikes();
+        Bikes bike3 = new Bikes();
+        Bikes bike4 = new Bikes();
+        Bikes bike5 = new Bikes();
+        car1.name = "Lamborghini";
+        car2.name = "Ferrari";
+        car3.name = "Bugatti";
+        car4.name = "Pagati";
+        car5.name = "Porsche";
+        bike1.name = "Harley Davidson";
+        bike2.name = "Ducati";
+        bike3.name = "Suzuki";
+        bike4.name = "Ecosse";
+        bike5.name = "Yamaha";
+        bike1.cost = "$2203,000";
+        bike2.cost = "$120,000";
+        bike3.cost = "$50,000";
+        bike4.cost = "$53,000";
+        bike5.cost = "$3,000";
+        car1.cost = "$02203,000";
+        car2.cost = "$22223,000";
+        car3.cost = "$103,000";
+        car4.cost = "$500,000";
+        car5.cost = "$12203,000";
+
+        System.out.println("What do you want to buy?");
+        System.out.println("1. Bikes");
+        System.out.println("2. Cars");
+        int choice;
+        System.out.println("Enter your choice: ");
+        choice = s.nextInt();
+        if (choice == 1) {
+            System.out.println("We have 5 models: ");
+            System.out.println("1. Harley Davidson");
+            System.out.println("2. Ducati");
+            System.out.println("3. Pagani");
+            System.out.println("4. Suzuki");
+            System.out.println("5. Yamaha");
+            System.out.println("Enter your choice: ");
+            int n;
+            n = s.nextInt();
+            if (n == 1) {
+                System.out.println("The cost of Harley Davidson: " + bike1.cost);
+            } else if (n == 2) {
+                System.out.println("The cost of Ducati: " + bike2.cost);
+            } else if (n == 3) {
+                System.out.println("The cost of Pagani" + bike3.cost);
+            } else if (n == 4) {
+                System.out.println("The cost of Suzuki: " + bike4.cost);
+            } else if (n == 5) {
+                System.out.println("The cost of Yamaha: " + bike5.cost);
+            } else {
+                System.out.println("Please enter the value between 1-5");
+            }
+        } else if (choice == 2) {
+            System.out.println("We have 5 models available: ");
+            System.out.println("1. Lamborghini");
+            System.out.println("2. Ferrari");
+            System.out.println("3. Bugati");
+            System.out.println("4. Ecosse");
+            System.out.println("5. Porsche");
+            System.out.println("Enter your choice: ");
+            int c;
+            c = s.nextInt();
+            if (c == 1) {
+                System.out.println("The cost of Lamborghini is: " + car1.cost);
+            } else if (c == 2) {
+                System.out.println("The cost of Ferrari: " + car2.cost);
+            } else if (c == 3) {
+                System.out.println("The cost of Bugati: " + car3.cost);
+            } else if (c == 4) {
+                System.out.println("The cost of Ecosse: " + car4.cost);
+            } else if (c == 5) {
+                System.out.println("The cost of Porsche: " + car5.cost);
+            } else {
+                System.out.println("Please enter the value between 1-5");
+            }
+        } else {
+            System.out.println("Please enter the coice between 1-2");
+        }
+
 
         //Method Overloading
-        Eight e1 = new Eight();
-        e1.school(2);
-        e1.school('d', 44.76);
-        Eight.school(45,5);
-        Eight.school('z', 55.233,4);
-        Eight.school(45.5,5);
+//        Eight e1 = new Eight();
+//        e1.school(2);
+//        e1.school('d', 44.76);
+//        Eight.school(45,5);
+//        Eight.school('z', 55.233,4);
+//        Eight.school(45.5,5);
 
 //        final  String COMPANY_NAME = "Neso Academy";
 //        System.out.println(COMPANY_NAME);
@@ -53,7 +170,7 @@ public class Main {
         int total = obj.add(5, 6, 8);
         System.out.println("Total is: " + total);
 
-        int total1 = obj.add(3,6,6);
+        int total1 = obj.add(3, 6, 6);
         System.out.println("Total1 is: " + total1);
 
         double total2 = obj.add(3.5, 55.5);
@@ -199,11 +316,7 @@ public class Main {
     private static void oneTenth() {
         BigDecimal oneTenth = BigDecimal.valueOf(0.1);
         BigDecimal result1 = oneTenth.multiply(BigDecimal.valueOf(7));
-        BigDecimal result2 = oneTenth.add(oneTenth
-                .add(oneTenth)
-                .add(oneTenth)
-                .add(oneTenth)
-                .add(oneTenth));
+        BigDecimal result2 = oneTenth.add(oneTenth.add(oneTenth).add(oneTenth).add(oneTenth).add(oneTenth));
         BigDecimal difference = result1.subtract(result2);
         System.out.printf("The difference is %.99f %n", difference);
     }
@@ -422,8 +535,7 @@ public class Main {
                 System.out.println(position);
             }
 
-        }
-        while (position != -1);
+        } while (position != -1);
 
         String fixedString = courseName.replace(" Java", " C");
         System.out.println(fixedString);
