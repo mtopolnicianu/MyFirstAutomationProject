@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
     private static Cars cars;
     private static Bikes bikes;
     private static final String ROAD = "|                             |";
@@ -21,6 +23,19 @@ public class Main {
     private static JavaMethodsExercises.MethodOverloading obj = new JavaMethodsExercises.MethodOverloading();
 
     public static void main(String[] args) {
+
+        ClassesMethods myObj = new ClassesMethods();
+        myObj.x = 25;
+        System.out.println(myObj.x);
+
+        ClassesMethods mySecondObj = new ClassesMethods();
+        ClassesMethods myThirdObj = new ClassesMethods();
+        mySecondObj.y = 505;
+        myThirdObj.x  =1011;
+        System.out.println(mySecondObj.y);
+        System.out.println(myThirdObj.x);
+        ClassesMethods myFifthObj = new ClassesMethods();
+        System.out.println("Name: " + myFifthObj.fname + myFifthObj.lname + "with age " + myFifthObj.age);
 
         Cars cars = new Cars();
         Bikes bikes = new Bikes();
