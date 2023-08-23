@@ -22,7 +22,7 @@ public class Main {
     private static final StringBuilder BUILDER = new StringBuilder();
     private static JavaMethodsExercises.MethodOverloading obj = new JavaMethodsExercises.MethodOverloading();
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         ClassesMethods myObj = new ClassesMethods();
         myObj.x = 25;
