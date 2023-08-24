@@ -1,4 +1,4 @@
-package Polymorphism;
+package polymorphism;
 
 class Circle extends Shapes {
     public void area() {

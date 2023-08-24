@@ -1,4 +1,4 @@
-package Polymorphism;
+package polymorphism;
 
 public class Shapes {
     public void area() {
