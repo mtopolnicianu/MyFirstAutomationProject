@@ -1,4 +1,4 @@
-package Polymorphism;
+package polymorphism;
 
 public class Pikachu extends Pokemon {
     public int getAttackValue() {
