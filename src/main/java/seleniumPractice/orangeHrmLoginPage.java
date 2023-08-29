@@ -46,10 +46,18 @@ public class orangeHrmLoginPage {
         pressLoginButton.click();
 
         Thread.sleep(2000);
-        WebElement txt = driver.findElement(By.cssSelector("span:contains('Recruitment')"));
-        txt.click();
-        driver.close();
-        driver.quit();
+        WebElement accessDirectoryLink = driver.findElement(By.id("path-2"));
+        accessDirectoryLink.click();
+
+        Thread.sleep(2000);
+        WebElement accessDashboardLink = driver.findElement(By.id("path0"));
+        accessDashboardLink.click();
+
+//        Thread.sleep(2000);
+//        WebElement txt = driver.findElement(By.cssSelector("span:contains('Recruitment')"));
+//        txt.click();
+//        driver.close();
+//        driver.quit();
     }
 
 }
