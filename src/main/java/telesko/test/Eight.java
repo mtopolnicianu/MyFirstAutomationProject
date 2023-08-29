@@ -1,3 +1,5 @@
+package telesko.test;
+
 //Method Overloading
 public class Eight {
     void school(int a) {

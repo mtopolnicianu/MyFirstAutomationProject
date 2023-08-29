@@ -1,3 +1,5 @@
+package telesko.test;
+
 public class JavaBooleansExercises {
 
     public static boolean firstExercise(boolean a) {

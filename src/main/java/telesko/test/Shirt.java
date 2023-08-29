@@ -1,3 +1,5 @@
+package telesko.test;
+
 import java.util.Scanner;
 
 public class Shirt {
@@ -22,11 +24,11 @@ public class Shirt {
     }
 
     //
-//    Shirt(){
+//    telesko.test.Shirt(){
 //        System.out.println("inside constructor!");
 //    }
     public static void putOn() {
-        System.out.println("Shirt is on!");
+        System.out.println("telesko.test.Shirt is on!");
     }
 
     public static void takeOff() {

@@ -1,3 +1,5 @@
+package telesko.test;
+
 public class Song {
 
     private String title;
@@ -11,7 +13,7 @@ public class Song {
         this.title = title;
         this.length = length;
         songsCount++;
-        System.out.println("Song count: " + songsCount);
+        System.out.println("telesko.test.Song count: " + songsCount);
     }
 
     public int getSongsCount() {

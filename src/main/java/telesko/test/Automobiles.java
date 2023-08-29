@@ -1,3 +1,5 @@
+package telesko.test;
+
 public class Automobiles {
     private double fuel;
     private int year;

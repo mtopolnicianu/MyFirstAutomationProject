@@ -1,3 +1,5 @@
+package telesko.test;
+
 public class ExceptionHandling {
     static void checkAge(int age) {
         if (age < 18) {

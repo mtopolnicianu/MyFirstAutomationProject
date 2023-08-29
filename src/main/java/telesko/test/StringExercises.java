@@ -1,3 +1,4 @@
+package telesko.test;
 
 public class StringExercises {
 

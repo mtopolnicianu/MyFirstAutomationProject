@@ -1,3 +1,5 @@
+package telesko.test;
+
 public class Student {
 
     int id;

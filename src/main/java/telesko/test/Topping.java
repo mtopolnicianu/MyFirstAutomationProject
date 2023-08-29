@@ -1,3 +1,5 @@
+package telesko.test;
+
 public enum Topping {
     MUSTARD,
     PICKLES,

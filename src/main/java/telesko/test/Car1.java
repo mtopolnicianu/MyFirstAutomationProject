@@ -1,3 +1,5 @@
+package telesko.test;
+
 public class Car1 {
 
     String make = "Ford";
