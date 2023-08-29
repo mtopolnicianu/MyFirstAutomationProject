@@ -1,3 +1,7 @@
+package telesko.test;
+
+import telesko.test.Automobiles;
+
 public class Cars extends Automobiles {
     String name;
     String cost;

@@ -1,3 +1,5 @@
+package telesko.test;
+
 import java.awt.*;
 
 public class Circle {

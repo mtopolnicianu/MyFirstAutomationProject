@@ -1,3 +1,5 @@
+package telesko.test;
+
 import static java.lang.Math.abs;
 
 public class JavaMathExercises {

@@ -1,3 +1,5 @@
+package telesko.test;
+
 public class Pokemon {
     String name;
     int level;
